@@ -1,0 +1,357 @@
+{
+  "$schema": "../../schema.json",
+  "id": "tradeify/select-flex-25k",
+  "firm": {
+    "slug": "tradeify",
+    "name": "Tradeify"
+  },
+  "plan": {
+    "slug": "select-flex-25k",
+    "name": "Select Flex 25K",
+    "status": "active",
+    "source_url": "https://tradeify.co/"
+  },
+  "rules_verified": "2026-10-16",
+  "prices_verified": "2026-10-16",
+  "rules": {
+    "account": {
+      "size": {
+        "value": 25000,
+        "unit": "usd",
+        "source_url": "https://tradeify.co/",
+        "verified": "2026-10-17",
+        "status": "verified"
+      },
+      "instant_funding": {
+        "value": false,
+        "unit": "flag",
+        "source_url": "https://tradeify.co/",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "trading_day_start": {
+        "value": "18:00",
+        "unit": "clock_new_york",
+        "source_url": "https://help.tradeify.co/en/articles/10495876-rules-permitted-times-to-trade",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "trading_hours": {
+        "value": {
+          "start": "18:00",
+          "end": "16:45"
+        },
+        "unit": "time_window",
+        "source_url": "https://help.tradeify.co/en/articles/12268494-common-faqs",
+        "verified": "2026-10-16",
+        "status": "verified"
+      }
+    },
+    "evaluation": {
+      "profit_target": {
+        "value": 1500,
+        "unit": "usd",
+        "source_url": "https://tradeify.co/",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "max_drawdown": {
+        "value": 1000,
+        "unit": "usd",
+        "source_url": "https://tradeify.co/",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "drawdown_type": {
+        "value": "end_of_day",
+        "unit": "choice",
+        "source_url": "https://tradeify.co/",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "drawdown_stops_at": {
+        "value": "never",
+        "unit": "choice",
+        "source_url": "https://help.tradeify.co/en/articles/10495897-rules-trailing-max-drawdowns",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "daily_loss_limit": {
+        "value": null,
+        "unit": "usd",
+        "source_url": "https://tradeify.co/",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "consistency_max_day_pct": {
+        "value": 40,
+        "unit": "percent",
+        "source_url": "https://tradeify.co/",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "min_trading_days": {
+        "value": 3,
+        "unit": "trading_days",
+        "source_url": "https://tradeify.co/",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "time_limit_days": {
+        "value": null,
+        "unit": "calendar_days",
+        "source_url": "https://help.tradeify.co/en/articles/10495915-growth-evaluation-accounts",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "max_contracts": {
+        "value": 1,
+        "unit": "contracts",
+        "source_url": "https://tradeify.co/",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "contract_growth": {
+        "value": null,
+        "unit": "contract_growth",
+        "source_url": "https://tradeify.co/",
+        "verified": "2026-10-16",
+        "status": "verified"
+      }
+    },
+    "funded": {
+      "starting_balance": {
+        "value": 25000,
+        "unit": "usd",
+        "source_url": "https://tradeify.co/",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "max_drawdown": {
+        "value": 1000,
+        "unit": "usd",
+        "source_url": "https://tradeify.co/",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "drawdown_type": {
+        "value": "end_of_day",
+        "unit": "choice",
+        "source_url": "https://tradeify.co/",
+        "verified": "2026-10-17",
+        "status": "verified"
+      },
+      "drawdown_stops_above_start": {
+        "value": 100,
+        "unit": "usd",
+        "source_url": "https://tradeify.co/post/prop-firm-payout-rules-every-funded-trader-should-know",
+        "verified": "2026-10-21",
+        "status": "verified"
+      },
+      "drawdown_after_payout": {
+        "value": {
+          "after": "first_payout",
+          "floor_above_start": 100
+        },
+        "unit": "payout_lock",
+        "source_url": "https://help.tradeify.co/en/articles/10495897-rules-trailing-max-drawdowns",
+        "verified": "2026-10-18",
+        "status": "verified"
+      },
+      "daily_loss_limit": {
+        "value": null,
+        "unit": "usd",
+        "source_url": "https://tradeify.co/",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "max_contracts": {
+        "value": null,
+        "unit": "contracts",
+        "source_url": "https://help.tradeify.co/en/articles/12853966-select-flex-and-select-daily-payout-policies",
+        "verified": "2026-10-18",
+        "status": "verified"
+      },
+      "contract_scaling": {
+        "value": [
+          {
+            "profit_above": 0,
+            "max_contracts": 1
+          },
+          {
+            "profit_above": 1500,
+            "max_contracts": 2
+          }
+        ],
+        "unit": "contract_scaling",
+        "source_url": "https://help.tradeify.co/en/articles/12853966-select-flex-and-select-daily-payout-policies",
+        "verified": "2026-10-18",
+        "status": "verified"
+      },
+      "contract_growth": {
+        "value": null,
+        "unit": "contract_growth",
+        "source_url": "https://help.tradeify.co/en/articles/12853966-select-flex-and-select-daily-payout-policies",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "reduced_size_until_buffer": {
+        "value": null,
+        "unit": "reduced_size",
+        "source_url": "https://help.tradeify.co/en/articles/12853966-select-flex-and-select-daily-payout-policies",
+        "verified": "2026-10-16",
+        "status": "verified"
+      }
+    },
+    "payouts": {
+      "min_trading_days": {
+        "value": null,
+        "unit": "trading_days",
+        "source_url": "https://help.tradeify.co/en/articles/12853966-select-flex-and-select-daily-payout-policies",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "min_calendar_days_between": {
+        "value": null,
+        "unit": "calendar_days",
+        "source_url": "https://help.tradeify.co/en/articles/12268167-essential-trading-rules-overview",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "min_winning_days": {
+        "value": 5,
+        "unit": "trading_days",
+        "source_url": "https://tradeify.co/post/prop-firm-payout-rules-every-funded-trader-should-know",
+        "verified": "2026-10-21",
+        "status": "verified"
+      },
+      "winning_day_min_profit": {
+        "value": 100,
+        "unit": "usd",
+        "source_url": "https://tradeify.co/post/prop-firm-payout-rules-every-funded-trader-should-know",
+        "verified": "2026-10-21",
+        "status": "verified"
+      },
+      "consistency_max_day_pct": {
+        "value": null,
+        "unit": "percent",
+        "source_url": "https://tradeify.co/",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "profit_basis": {
+        "value": "since_last_payout",
+        "unit": "choice",
+        "source_url": "https://help.tradeify.co/en/articles/12853966-select-flex-and-select-daily-payout-policies",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "min_profit": {
+        "value": 250,
+        "unit": "usd",
+        "source_url": "https://help.tradeify.co/en/articles/12853966-select-flex-and-select-daily-payout-policies",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "buffer": {
+        "value": 0,
+        "unit": "usd",
+        "source_url": "https://tradeify.co/post/prop-firm-payout-rules-every-funded-trader-should-know",
+        "verified": "2026-10-21",
+        "status": "verified"
+      },
+      "max_payout": {
+        "value": 1250,
+        "unit": "usd",
+        "source_url": "https://tradeify.co/",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "max_payout_pct_of_profit": {
+        "value": 50,
+        "unit": "percent",
+        "source_url": "https://tradeify.co/post/prop-firm-payout-rules-every-funded-trader-should-know",
+        "verified": "2026-10-21",
+        "status": "verified"
+      },
+      "max_payout_pct_of_balance": {
+        "value": null,
+        "unit": "percent",
+        "source_url": "https://help.tradeify.co/en/articles/12853966-select-flex-and-select-daily-payout-policies",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "max_payout_multiple_of_recent_profit": {
+        "value": null,
+        "unit": "multiple",
+        "source_url": "https://help.tradeify.co/en/articles/12853966-select-flex-and-select-daily-payout-policies",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "profit_split_pct": {
+        "value": 90,
+        "unit": "percent",
+        "source_url": "https://tradeify.co/post/prop-firm-payout-rules-every-funded-trader-should-know",
+        "verified": "2026-10-21",
+        "status": "verified"
+      },
+      "lifetime_max_payouts": {
+        "value": null,
+        "unit": "count",
+        "source_url": "https://help.tradeify.co/en/articles/12969284-tradeify-elite-program",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "lifetime_max_payout_usd": {
+        "value": null,
+        "unit": "usd",
+        "source_url": "https://help.tradeify.co/en/articles/12969284-tradeify-elite-program",
+        "verified": "2026-10-16",
+        "status": "verified"
+      }
+    }
+  },
+  "prices": {
+    "evaluation_fee": {
+      "value": 109,
+      "unit": "usd",
+      "source_url": "https://tradeify.co/",
+      "verified": "2026-10-16",
+      "status": "verified"
+    },
+    "recurring_fee": {
+      "value": null,
+      "unit": "usd",
+      "source_url": "https://tradeify.co/",
+      "verified": "2026-10-16",
+      "status": "verified"
+    },
+    "recurring_fee_every_days": {
+      "value": null,
+      "unit": "calendar_days",
+      "source_url": "https://tradeify.co/",
+      "verified": "2026-10-16",
+      "status": "verified"
+    },
+    "reset_fee": {
+      "value": 75,
+      "unit": "usd",
+      "source_url": "https://tradeify.co/",
+      "verified": "2026-10-18",
+      "status": "verified"
+    },
+    "activation_fee": {
+      "value": 0,
+      "unit": "usd",
+      "source_url": "https://tradeify.co/",
+      "verified": "2026-10-16",
+      "status": "verified"
+    }
+  },
+  "simulation_notes": [],
+  "generated": {
+    "engine_id": "tradeify-select-flex-25k",
+    "engine_sha256": "d22c452ab70a6f450db93f09cbfe2fb024cc74f3106e47c3dd9696736de76b15",
+    "values_sha256": "e8882ffb4bf92e0654035d18980563d6fdeeba58b9aac09a3856b81005184d58"
+  }
+}

@@ -1,0 +1,33 @@
+name: Rule correction
+description: A rule or price here does not match the firm's own page.
+title: "Correction: <firm> <plan> <rule>"
+labels: [correction]
+body:
+  - type: input
+    id: file
+    attributes:
+      label: File
+      description: The plan file, for example rules/topstep/50k.json
+    validations:
+      required: true
+  - type: input
+    id: rule
+    attributes:
+      label: Rule
+      description: The rule's name in the file, for example evaluation.profit_target or prices.reset_fee
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: The firm's page
+      description: A link to the firm's own page that states the rule (help center, rules page or checkout).
+    validations:
+      required: true
+  - type: textarea
+    id: says
+    attributes:
+      label: What the page says
+      description: In your own words, what the rule is now. Please do not paste the firm's text at length.
+    validations:
+      required: true

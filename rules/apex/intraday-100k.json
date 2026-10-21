@@ -1,0 +1,375 @@
+{
+  "$schema": "../../schema.json",
+  "id": "apex/intraday-100k",
+  "firm": {
+    "slug": "apex",
+    "name": "Apex"
+  },
+  "plan": {
+    "slug": "intraday-100k",
+    "name": "Intraday 100K",
+    "status": "active",
+    "source_url": "https://apextraderfunding.com/"
+  },
+  "rules_verified": "2026-10-16",
+  "prices_verified": "2026-10-16",
+  "rules": {
+    "account": {
+      "size": {
+        "value": 100000,
+        "unit": "usd",
+        "source_url": "https://apextraderfunding.com/",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "instant_funding": {
+        "value": false,
+        "unit": "flag",
+        "source_url": "https://apextraderfunding.com/",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "trading_day_start": {
+        "value": "18:00",
+        "unit": "clock_new_york",
+        "source_url": "https://apextraderfunding.com/help-center/getting-started/futures-trading-times/",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "trading_hours": {
+        "value": {
+          "start": "18:00",
+          "end": "16:59"
+        },
+        "unit": "time_window",
+        "source_url": "https://apextraderfunding.com/help-center/getting-started/futures-trading-times/",
+        "verified": "2026-10-16",
+        "status": "verified"
+      }
+    },
+    "evaluation": {
+      "profit_target": {
+        "value": 6000,
+        "unit": "usd",
+        "source_url": "https://apextraderfunding.com/help-center/evaluation-accounts-ea/intraday-trailing-drawdown-evaluations/",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "max_drawdown": {
+        "value": 3000,
+        "unit": "usd",
+        "source_url": "https://apextraderfunding.com/help-center/evaluation-accounts-ea/intraday-trailing-drawdown-evaluations/",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "drawdown_type": {
+        "value": "intraday",
+        "unit": "choice",
+        "source_url": "https://apextraderfunding.com/help-center/intraday-trailing-drawdown-accounts/intraday-trailing-drawdown-explained/",
+        "verified": "2026-10-17",
+        "status": "verified"
+      },
+      "drawdown_stops_at": {
+        "value": "profit_target",
+        "unit": "choice",
+        "source_url": "https://apextraderfunding.com/help-center/intraday-trailing-drawdown-accounts/intraday-trailing-drawdown-explained/",
+        "verified": "2026-10-17",
+        "status": "verified"
+      },
+      "daily_loss_limit": {
+        "value": null,
+        "unit": "usd",
+        "source_url": "https://apextraderfunding.com/help-center/evaluation-accounts-ea/intraday-trailing-drawdown-evaluations/",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "consistency_max_day_pct": {
+        "value": null,
+        "unit": "percent",
+        "source_url": "https://apextraderfunding.com/help-center/evaluation-accounts-ea/intraday-trailing-drawdown-evaluations/",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "min_trading_days": {
+        "value": null,
+        "unit": "trading_days",
+        "source_url": "https://apextraderfunding.com/help-center/evaluation-accounts-ea/intraday-trailing-drawdown-evaluations/",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "time_limit_days": {
+        "value": 30,
+        "unit": "calendar_days",
+        "source_url": "https://apextraderfunding.com/help-center/billing/evaluation-plan-fees-and-access-explained/",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "max_contracts": {
+        "value": 8,
+        "unit": "contracts",
+        "source_url": "https://apextraderfunding.com/help-center/evaluation-accounts-ea/intraday-trailing-drawdown-evaluations/",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "contract_growth": {
+        "value": null,
+        "unit": "contract_growth",
+        "source_url": "https://apextraderfunding.com/help-center/evaluation-accounts-ea/intraday-trailing-drawdown-evaluations/",
+        "verified": "2026-10-16",
+        "status": "verified"
+      }
+    },
+    "funded": {
+      "starting_balance": {
+        "value": 100000,
+        "unit": "usd",
+        "source_url": "https://apextraderfunding.com/",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "max_drawdown": {
+        "value": 3000,
+        "unit": "usd",
+        "source_url": "https://apextraderfunding.com/help-center/evaluation-accounts-ea/intraday-trailing-drawdown-evaluations/",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "drawdown_type": {
+        "value": "intraday",
+        "unit": "choice",
+        "source_url": "https://apextraderfunding.com/help-center/intraday-trailing-drawdown-accounts/intraday-trailing-drawdown-explained/",
+        "verified": "2026-10-17",
+        "status": "verified"
+      },
+      "drawdown_stops_above_start": {
+        "value": 100,
+        "unit": "usd",
+        "source_url": "https://apextraderfunding.com/help-center/intraday-trailing-drawdown-accounts/intraday-trailing-drawdown-explained/",
+        "verified": "2026-10-17",
+        "status": "verified"
+      },
+      "drawdown_after_payout": {
+        "value": null,
+        "unit": "payout_lock",
+        "source_url": "https://apextraderfunding.com/help-center/intraday-trailing-drawdown-accounts/intraday-trailing-drawdown-explained/",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "daily_loss_limit": {
+        "value": 1750,
+        "unit": "usd",
+        "source_url": "https://apextraderfunding.com/help-center/additional-helpful-items/daily-loss-limit-explained/",
+        "verified": "2026-10-18",
+        "status": "verified"
+      },
+      "max_contracts": {
+        "value": null,
+        "unit": "contracts",
+        "source_url": "https://apextraderfunding.com/help-center/additional-helpful-items/scaling-levels-pa-explained/",
+        "verified": "2026-10-17",
+        "status": "verified"
+      },
+      "contract_scaling": {
+        "value": [
+          {
+            "profit_above": 0,
+            "max_contracts": 3
+          },
+          {
+            "profit_above": 2000,
+            "max_contracts": 4
+          },
+          {
+            "profit_above": 3000,
+            "max_contracts": 5
+          },
+          {
+            "profit_above": 5000,
+            "max_contracts": 6
+          },
+          {
+            "profit_above": 10000,
+            "max_contracts": 6
+          }
+        ],
+        "unit": "contract_scaling",
+        "source_url": "https://apextraderfunding.com/help-center/additional-helpful-items/scaling-levels-pa-explained/",
+        "verified": "2026-10-17",
+        "status": "verified"
+      },
+      "contract_growth": {
+        "value": null,
+        "unit": "contract_growth",
+        "source_url": "https://apextraderfunding.com/help-center/intraday-trailing-drawdown-accounts/intraday-trailing-drawdown-performance-accounts-pa/",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "reduced_size_until_buffer": {
+        "value": null,
+        "unit": "reduced_size",
+        "source_url": "https://apextraderfunding.com/help-center/additional-helpful-items/scaling-levels-pa-explained/",
+        "verified": "2026-10-18",
+        "status": "verified"
+      }
+    },
+    "payouts": {
+      "min_trading_days": {
+        "value": null,
+        "unit": "trading_days",
+        "source_url": "https://apextraderfunding.com/help-center/intraday-trailing-drawdown-accounts/intraday-trailing-drawdown-payouts/",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "min_calendar_days_between": {
+        "value": null,
+        "unit": "calendar_days",
+        "source_url": "https://apextraderfunding.com/help-center/intraday-trailing-drawdown-accounts/intraday-trailing-drawdown-payouts/",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "min_winning_days": {
+        "value": 5,
+        "unit": "trading_days",
+        "source_url": "https://apextraderfunding.com/help-center/intraday-trailing-drawdown-accounts/intraday-trailing-drawdown-payouts/",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "winning_day_min_profit": {
+        "value": 250,
+        "unit": "usd",
+        "source_url": "https://apextraderfunding.com/help-center/intraday-trailing-drawdown-accounts/intraday-trailing-drawdown-payouts/",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "consistency_max_day_pct": {
+        "value": 50,
+        "unit": "percent",
+        "source_url": "https://apextraderfunding.com/help-center/additional-helpful-items/50-consistency-requirement/",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "profit_basis": {
+        "value": "since_last_payout",
+        "unit": "choice",
+        "source_url": "https://apextraderfunding.com/help-center/intraday-trailing-drawdown-accounts/intraday-trailing-drawdown-payouts/",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "min_profit": {
+        "value": [
+          3600,
+          500
+        ],
+        "unit": "usd",
+        "source_url": "https://apextraderfunding.com/help-center/intraday-trailing-drawdown-accounts/intraday-trailing-drawdown-payouts/",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "buffer": {
+        "value": 3100,
+        "unit": "usd",
+        "source_url": "https://apextraderfunding.com/help-center/intraday-trailing-drawdown-accounts/intraday-trailing-drawdown-payouts/",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "max_payout": {
+        "value": [
+          2000,
+          2500,
+          3000,
+          3000,
+          4000
+        ],
+        "unit": "usd",
+        "source_url": "https://apextraderfunding.com/help-center/intraday-trailing-drawdown-accounts/intraday-trailing-drawdown-payouts/",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "max_payout_pct_of_profit": {
+        "value": null,
+        "unit": "percent",
+        "source_url": "https://apextraderfunding.com/help-center/intraday-trailing-drawdown-accounts/intraday-trailing-drawdown-payouts/",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "max_payout_pct_of_balance": {
+        "value": null,
+        "unit": "percent",
+        "source_url": "https://apextraderfunding.com/help-center/intraday-trailing-drawdown-accounts/intraday-trailing-drawdown-payouts/",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "max_payout_multiple_of_recent_profit": {
+        "value": null,
+        "unit": "multiple",
+        "source_url": "https://apextraderfunding.com/help-center/intraday-trailing-drawdown-accounts/intraday-trailing-drawdown-payouts/",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "profit_split_pct": {
+        "value": 100,
+        "unit": "percent",
+        "source_url": "https://apextraderfunding.com/help-center/intraday-trailing-drawdown-accounts/intraday-trailing-drawdown-payouts/",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "lifetime_max_payouts": {
+        "value": 6,
+        "unit": "count",
+        "source_url": "https://apextraderfunding.com/help-center/intraday-trailing-drawdown-accounts/intraday-trailing-drawdown-payouts/",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "lifetime_max_payout_usd": {
+        "value": null,
+        "unit": "usd",
+        "source_url": "https://apextraderfunding.com/help-center/intraday-trailing-drawdown-accounts/intraday-trailing-drawdown-payouts/",
+        "verified": "2026-10-16",
+        "status": "verified"
+      }
+    }
+  },
+  "prices": {
+    "evaluation_fee": {
+      "value": 79,
+      "unit": "usd",
+      "source_url": "https://apextraderfunding.com/",
+      "verified": "2026-10-18",
+      "status": "verified"
+    },
+    "recurring_fee": {
+      "value": null,
+      "unit": "usd",
+      "source_url": "https://apextraderfunding.com/help-center/billing/evaluation-plan-fees-and-access-explained/",
+      "verified": "2026-10-16",
+      "status": "verified"
+    },
+    "recurring_fee_every_days": {
+      "value": null,
+      "unit": "calendar_days",
+      "source_url": "https://apextraderfunding.com/help-center/billing/evaluation-plan-fees-and-access-explained/",
+      "verified": "2026-10-16",
+      "status": "verified"
+    },
+    "reset_fee": {
+      "value": null,
+      "unit": "usd",
+      "source_url": "https://apextraderfunding.com/help-center/billing/evaluation-plan-fees-and-access-explained/",
+      "verified": "2026-10-16",
+      "status": "verified"
+    },
+    "activation_fee": {
+      "value": 129,
+      "unit": "usd",
+      "source_url": "https://apextraderfunding.com/",
+      "verified": "2026-10-18",
+      "status": "verified"
+    }
+  },
+  "simulation_notes": [],
+  "generated": {
+    "engine_id": "apex-intraday-100k",
+    "engine_sha256": "da97fc442f170aab73014d13006faf0aceb3b9691093428dcf19a1c4409469bd",
+    "values_sha256": "e68b022601e66820c9823ecefd711a8e98c60d0a033e7e3ae933bd322fa33f96"
+  }
+}

@@ -1,0 +1,420 @@
+{
+  "format": "algolift-prop-firm-rules/1",
+  "recheck_window_days": 45,
+  "registry": {
+    "format": "algolift-prop-registry/1",
+    "version": 2,
+    "sha256": "492b0be5febff64da6e568d5c7253538b8c92d82178c65187e65a4c1e7e9f752",
+    "published_at": "2026-10-21T19:33:39.151Z"
+  },
+  "plans": [
+    {
+      "id": "topstep/50k",
+      "path": "rules/topstep/50k.json",
+      "firm": "Topstep",
+      "plan": "50K Combine",
+      "rules_verified": "2026-10-16",
+      "prices_verified": "2026-10-21"
+    },
+    {
+      "id": "topstep/100k",
+      "path": "rules/topstep/100k.json",
+      "firm": "Topstep",
+      "plan": "100K Combine",
+      "rules_verified": "2026-10-16",
+      "prices_verified": "2026-10-21"
+    },
+    {
+      "id": "topstep/150k",
+      "path": "rules/topstep/150k.json",
+      "firm": "Topstep",
+      "plan": "150K Combine",
+      "rules_verified": "2026-10-16",
+      "prices_verified": "2026-10-21"
+    },
+    {
+      "id": "apex/eod-25k",
+      "path": "rules/apex/eod-25k.json",
+      "firm": "Apex",
+      "plan": "EOD 25K",
+      "rules_verified": "2026-10-16",
+      "prices_verified": "2026-10-16"
+    },
+    {
+      "id": "apex/eod-50k",
+      "path": "rules/apex/eod-50k.json",
+      "firm": "Apex",
+      "plan": "EOD 50K",
+      "rules_verified": "2026-10-16",
+      "prices_verified": "2026-10-16"
+    },
+    {
+      "id": "apex/eod-100k",
+      "path": "rules/apex/eod-100k.json",
+      "firm": "Apex",
+      "plan": "EOD 100K",
+      "rules_verified": "2026-10-16",
+      "prices_verified": "2026-10-16"
+    },
+    {
+      "id": "apex/eod-150k",
+      "path": "rules/apex/eod-150k.json",
+      "firm": "Apex",
+      "plan": "EOD 150K",
+      "rules_verified": "2026-10-16",
+      "prices_verified": "2026-10-16"
+    },
+    {
+      "id": "apex/intraday-25k",
+      "path": "rules/apex/intraday-25k.json",
+      "firm": "Apex",
+      "plan": "Intraday 25K",
+      "rules_verified": "2026-10-16",
+      "prices_verified": "2026-10-16"
+    },
+    {
+      "id": "apex/intraday-50k",
+      "path": "rules/apex/intraday-50k.json",
+      "firm": "Apex",
+      "plan": "Intraday 50K",
+      "rules_verified": "2026-10-16",
+      "prices_verified": "2026-10-16"
+    },
+    {
+      "id": "apex/intraday-100k",
+      "path": "rules/apex/intraday-100k.json",
+      "firm": "Apex",
+      "plan": "Intraday 100K",
+      "rules_verified": "2026-10-16",
+      "prices_verified": "2026-10-16"
+    },
+    {
+      "id": "apex/intraday-150k",
+      "path": "rules/apex/intraday-150k.json",
+      "firm": "Apex",
+      "plan": "Intraday 150K",
+      "rules_verified": "2026-10-16",
+      "prices_verified": "2026-10-16"
+    },
+    {
+      "id": "my-funded-futures/rapid-25k",
+      "path": "rules/my-funded-futures/rapid-25k.json",
+      "firm": "My Funded Futures",
+      "plan": "Rapid 25K",
+      "rules_verified": "2026-10-16",
+      "prices_verified": "2026-10-16"
+    },
+    {
+      "id": "my-funded-futures/rapid-50k",
+      "path": "rules/my-funded-futures/rapid-50k.json",
+      "firm": "My Funded Futures",
+      "plan": "Rapid 50K",
+      "rules_verified": "2026-10-16",
+      "prices_verified": "2026-10-16"
+    },
+    {
+      "id": "my-funded-futures/rapid-100k",
+      "path": "rules/my-funded-futures/rapid-100k.json",
+      "firm": "My Funded Futures",
+      "plan": "Rapid 100K",
+      "rules_verified": "2026-10-16",
+      "prices_verified": "2026-10-16"
+    },
+    {
+      "id": "my-funded-futures/rapid-150k",
+      "path": "rules/my-funded-futures/rapid-150k.json",
+      "firm": "My Funded Futures",
+      "plan": "Rapid 150K",
+      "rules_verified": "2026-10-16",
+      "prices_verified": "2026-10-16"
+    },
+    {
+      "id": "my-funded-futures/pro-50k",
+      "path": "rules/my-funded-futures/pro-50k.json",
+      "firm": "My Funded Futures",
+      "plan": "Pro 50K",
+      "rules_verified": "2026-10-16",
+      "prices_verified": "2026-10-16"
+    },
+    {
+      "id": "my-funded-futures/pro-100k",
+      "path": "rules/my-funded-futures/pro-100k.json",
+      "firm": "My Funded Futures",
+      "plan": "Pro 100K",
+      "rules_verified": "2026-10-16",
+      "prices_verified": "2026-10-16"
+    },
+    {
+      "id": "my-funded-futures/pro-150k",
+      "path": "rules/my-funded-futures/pro-150k.json",
+      "firm": "My Funded Futures",
+      "plan": "Pro 150K",
+      "rules_verified": "2026-10-16",
+      "prices_verified": "2026-10-16"
+    },
+    {
+      "id": "my-funded-futures/flex-25k",
+      "path": "rules/my-funded-futures/flex-25k.json",
+      "firm": "My Funded Futures",
+      "plan": "Flex 25K",
+      "rules_verified": "2026-10-16",
+      "prices_verified": "2026-10-16"
+    },
+    {
+      "id": "my-funded-futures/flex-50k",
+      "path": "rules/my-funded-futures/flex-50k.json",
+      "firm": "My Funded Futures",
+      "plan": "Flex 50K",
+      "rules_verified": "2026-10-16",
+      "prices_verified": "2026-10-16"
+    },
+    {
+      "id": "my-funded-futures/builder-50k",
+      "path": "rules/my-funded-futures/builder-50k.json",
+      "firm": "My Funded Futures",
+      "plan": "Builder 50K",
+      "rules_verified": "2026-10-16",
+      "prices_verified": "2026-10-16"
+    },
+    {
+      "id": "tradeify/growth-25k",
+      "path": "rules/tradeify/growth-25k.json",
+      "firm": "Tradeify",
+      "plan": "Growth 25K",
+      "rules_verified": "2026-10-16",
+      "prices_verified": "2026-10-16"
+    },
+    {
+      "id": "tradeify/growth-50k",
+      "path": "rules/tradeify/growth-50k.json",
+      "firm": "Tradeify",
+      "plan": "Growth 50K",
+      "rules_verified": "2026-10-16",
+      "prices_verified": "2026-10-16"
+    },
+    {
+      "id": "tradeify/growth-100k",
+      "path": "rules/tradeify/growth-100k.json",
+      "firm": "Tradeify",
+      "plan": "Growth 100K",
+      "rules_verified": "2026-10-16",
+      "prices_verified": "2026-10-16"
+    },
+    {
+      "id": "tradeify/growth-150k",
+      "path": "rules/tradeify/growth-150k.json",
+      "firm": "Tradeify",
+      "plan": "Growth 150K",
+      "rules_verified": "2026-10-16",
+      "prices_verified": "2026-10-16"
+    },
+    {
+      "id": "tradeify/select-flex-25k",
+      "path": "rules/tradeify/select-flex-25k.json",
+      "firm": "Tradeify",
+      "plan": "Select Flex 25K",
+      "rules_verified": "2026-10-16",
+      "prices_verified": "2026-10-16"
+    },
+    {
+      "id": "tradeify/select-flex-50k",
+      "path": "rules/tradeify/select-flex-50k.json",
+      "firm": "Tradeify",
+      "plan": "Select Flex 50K",
+      "rules_verified": "2026-10-16",
+      "prices_verified": "2026-10-16"
+    },
+    {
+      "id": "tradeify/select-flex-100k",
+      "path": "rules/tradeify/select-flex-100k.json",
+      "firm": "Tradeify",
+      "plan": "Select Flex 100K",
+      "rules_verified": "2026-10-16",
+      "prices_verified": "2026-10-16"
+    },
+    {
+      "id": "tradeify/select-flex-150k",
+      "path": "rules/tradeify/select-flex-150k.json",
+      "firm": "Tradeify",
+      "plan": "Select Flex 150K",
+      "rules_verified": "2026-10-16",
+      "prices_verified": "2026-10-16"
+    },
+    {
+      "id": "tradeify/select-daily-25k",
+      "path": "rules/tradeify/select-daily-25k.json",
+      "firm": "Tradeify",
+      "plan": "Select Daily 25K",
+      "rules_verified": "2026-10-16",
+      "prices_verified": "2026-10-16"
+    },
+    {
+      "id": "tradeify/select-daily-50k",
+      "path": "rules/tradeify/select-daily-50k.json",
+      "firm": "Tradeify",
+      "plan": "Select Daily 50K",
+      "rules_verified": "2026-10-16",
+      "prices_verified": "2026-10-16"
+    },
+    {
+      "id": "tradeify/select-daily-100k",
+      "path": "rules/tradeify/select-daily-100k.json",
+      "firm": "Tradeify",
+      "plan": "Select Daily 100K",
+      "rules_verified": "2026-10-16",
+      "prices_verified": "2026-10-16"
+    },
+    {
+      "id": "tradeify/select-daily-150k",
+      "path": "rules/tradeify/select-daily-150k.json",
+      "firm": "Tradeify",
+      "plan": "Select Daily 150K",
+      "rules_verified": "2026-10-16",
+      "prices_verified": "2026-10-16"
+    },
+    {
+      "id": "tradeify/lightning-25k",
+      "path": "rules/tradeify/lightning-25k.json",
+      "firm": "Tradeify",
+      "plan": "Lightning 25K",
+      "rules_verified": "2026-10-16",
+      "prices_verified": "2026-10-16"
+    },
+    {
+      "id": "tradeify/lightning-50k",
+      "path": "rules/tradeify/lightning-50k.json",
+      "firm": "Tradeify",
+      "plan": "Lightning 50K",
+      "rules_verified": "2026-10-16",
+      "prices_verified": "2026-10-16"
+    },
+    {
+      "id": "tradeify/lightning-100k",
+      "path": "rules/tradeify/lightning-100k.json",
+      "firm": "Tradeify",
+      "plan": "Lightning 100K",
+      "rules_verified": "2026-10-16",
+      "prices_verified": "2026-10-16"
+    },
+    {
+      "id": "tradeify/lightning-150k",
+      "path": "rules/tradeify/lightning-150k.json",
+      "firm": "Tradeify",
+      "plan": "Lightning 150K",
+      "rules_verified": "2026-10-16",
+      "prices_verified": "2026-10-16"
+    },
+    {
+      "id": "tradeday/fp-50k",
+      "path": "rules/tradeday/fp-50k.json",
+      "firm": "TradeDay",
+      "plan": "Fast Pass 50K",
+      "rules_verified": "2026-10-21",
+      "prices_verified": "2026-10-21"
+    },
+    {
+      "id": "tradeday/fp-100k",
+      "path": "rules/tradeday/fp-100k.json",
+      "firm": "TradeDay",
+      "plan": "Fast Pass 100K",
+      "rules_verified": "2026-10-21",
+      "prices_verified": "2026-10-21"
+    },
+    {
+      "id": "tradeday/fp-150k",
+      "path": "rules/tradeday/fp-150k.json",
+      "firm": "TradeDay",
+      "plan": "Fast Pass 150K",
+      "rules_verified": "2026-10-21",
+      "prices_verified": "2026-10-21"
+    },
+    {
+      "id": "tradeday/qp-intraday-50k",
+      "path": "rules/tradeday/qp-intraday-50k.json",
+      "firm": "TradeDay",
+      "plan": "QP Intraday 50K",
+      "rules_verified": "2026-10-21",
+      "prices_verified": "2026-10-21"
+    },
+    {
+      "id": "tradeday/qp-intraday-100k",
+      "path": "rules/tradeday/qp-intraday-100k.json",
+      "firm": "TradeDay",
+      "plan": "QP Intraday 100K",
+      "rules_verified": "2026-10-21",
+      "prices_verified": "2026-10-21"
+    },
+    {
+      "id": "tradeday/qp-intraday-150k",
+      "path": "rules/tradeday/qp-intraday-150k.json",
+      "firm": "TradeDay",
+      "plan": "QP Intraday 150K",
+      "rules_verified": "2026-10-21",
+      "prices_verified": "2026-10-21"
+    },
+    {
+      "id": "tradeday/qp-eod-50k",
+      "path": "rules/tradeday/qp-eod-50k.json",
+      "firm": "TradeDay",
+      "plan": "QP EOD 50K",
+      "rules_verified": "2026-10-21",
+      "prices_verified": "2026-10-21"
+    },
+    {
+      "id": "tradeday/qp-eod-100k",
+      "path": "rules/tradeday/qp-eod-100k.json",
+      "firm": "TradeDay",
+      "plan": "QP EOD 100K",
+      "rules_verified": "2026-10-21",
+      "prices_verified": "2026-10-21"
+    },
+    {
+      "id": "tradeday/qp-eod-150k",
+      "path": "rules/tradeday/qp-eod-150k.json",
+      "firm": "TradeDay",
+      "plan": "QP EOD 150K",
+      "rules_verified": "2026-10-21",
+      "prices_verified": "2026-10-21"
+    },
+    {
+      "id": "take-profit-trader/25k",
+      "path": "rules/take-profit-trader/25k.json",
+      "firm": "Take Profit Trader",
+      "plan": "25K Test",
+      "rules_verified": "2026-10-16",
+      "prices_verified": "2026-10-16"
+    },
+    {
+      "id": "take-profit-trader/50k",
+      "path": "rules/take-profit-trader/50k.json",
+      "firm": "Take Profit Trader",
+      "plan": "50K Test",
+      "rules_verified": "2026-10-16",
+      "prices_verified": "2026-10-16"
+    },
+    {
+      "id": "take-profit-trader/75k",
+      "path": "rules/take-profit-trader/75k.json",
+      "firm": "Take Profit Trader",
+      "plan": "75K Test",
+      "rules_verified": "2026-10-16",
+      "prices_verified": "2026-10-16"
+    },
+    {
+      "id": "take-profit-trader/100k",
+      "path": "rules/take-profit-trader/100k.json",
+      "firm": "Take Profit Trader",
+      "plan": "100K Test",
+      "rules_verified": "2026-10-16",
+      "prices_verified": "2026-10-16"
+    },
+    {
+      "id": "take-profit-trader/150k",
+      "path": "rules/take-profit-trader/150k.json",
+      "firm": "Take Profit Trader",
+      "plan": "150K Test",
+      "rules_verified": "2026-10-16",
+      "prices_verified": "2026-10-16"
+    }
+  ]
+}

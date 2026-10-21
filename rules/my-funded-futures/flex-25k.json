@@ -1,0 +1,360 @@
+{
+  "$schema": "../../schema.json",
+  "id": "my-funded-futures/flex-25k",
+  "firm": {
+    "slug": "my-funded-futures",
+    "name": "My Funded Futures"
+  },
+  "plan": {
+    "slug": "flex-25k",
+    "name": "Flex 25K",
+    "status": "discontinued",
+    "source_url": "https://help.myfundedfutures.com/en/articles/15070844-flex-plan-25-000-a-comprehensive-guide"
+  },
+  "rules_verified": "2026-10-16",
+  "prices_verified": "2026-10-16",
+  "rules": {
+    "account": {
+      "size": {
+        "value": 25000,
+        "unit": "usd",
+        "source_url": "https://help.myfundedfutures.com/en/articles/15070844-flex-plan-25-000-a-comprehensive-guide",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "instant_funding": {
+        "value": false,
+        "unit": "flag",
+        "source_url": "https://help.myfundedfutures.com/en/articles/15070844-flex-plan-25-000-a-comprehensive-guide",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "trading_day_start": {
+        "value": "18:00",
+        "unit": "clock_new_york",
+        "source_url": "https://help.myfundedfutures.com/en/articles/9558251-permitted-times-to-trade",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "trading_hours": {
+        "value": {
+          "start": "18:00",
+          "end": "16:10"
+        },
+        "unit": "time_window",
+        "source_url": "https://help.myfundedfutures.com/en/articles/9558251-permitted-times-to-trade",
+        "verified": "2026-10-16",
+        "status": "verified"
+      }
+    },
+    "evaluation": {
+      "profit_target": {
+        "value": 1500,
+        "unit": "usd",
+        "source_url": "https://help.myfundedfutures.com/en/articles/15070844-flex-plan-25-000-a-comprehensive-guide",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "max_drawdown": {
+        "value": 1000,
+        "unit": "usd",
+        "source_url": "https://help.myfundedfutures.com/en/articles/15070844-flex-plan-25-000-a-comprehensive-guide",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "drawdown_type": {
+        "value": "end_of_day",
+        "unit": "choice",
+        "source_url": "https://help.myfundedfutures.com/en/articles/15070844-flex-plan-25-000-a-comprehensive-guide",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "drawdown_stops_at": {
+        "value": "starting_balance",
+        "unit": "choice",
+        "source_url": "https://help.myfundedfutures.com/en/articles/8348565-end-of-day-eod-drawdown-explained",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "daily_loss_limit": {
+        "value": null,
+        "unit": "usd",
+        "source_url": "https://help.myfundedfutures.com/en/articles/15070844-flex-plan-25-000-a-comprehensive-guide",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "consistency_max_day_pct": {
+        "value": 50,
+        "unit": "percent",
+        "source_url": "https://help.myfundedfutures.com/en/articles/15070844-flex-plan-25-000-a-comprehensive-guide",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "min_trading_days": {
+        "value": 2,
+        "unit": "trading_days",
+        "source_url": "https://help.myfundedfutures.com/en/articles/15070844-flex-plan-25-000-a-comprehensive-guide",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "time_limit_days": {
+        "value": null,
+        "unit": "calendar_days",
+        "source_url": "https://myfundedfutures.com/how-it-works",
+        "verified": "2026-10-21",
+        "status": "verified"
+      },
+      "max_contracts": {
+        "value": 2,
+        "unit": "contracts",
+        "source_url": "https://help.myfundedfutures.com/en/articles/15070844-flex-plan-25-000-a-comprehensive-guide",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "contract_growth": {
+        "value": null,
+        "unit": "contract_growth",
+        "source_url": "https://help.myfundedfutures.com/en/articles/15070844-flex-plan-25-000-a-comprehensive-guide",
+        "verified": "2026-10-16",
+        "status": "verified"
+      }
+    },
+    "funded": {
+      "starting_balance": {
+        "value": 0,
+        "unit": "usd",
+        "source_url": "https://help.myfundedfutures.com/en/articles/15070844-flex-plan-25-000-a-comprehensive-guide",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "max_drawdown": {
+        "value": 1000,
+        "unit": "usd",
+        "source_url": "https://help.myfundedfutures.com/en/articles/15070844-flex-plan-25-000-a-comprehensive-guide",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "drawdown_type": {
+        "value": "end_of_day",
+        "unit": "choice",
+        "source_url": "https://help.myfundedfutures.com/en/articles/15070844-flex-plan-25-000-a-comprehensive-guide",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "drawdown_stops_above_start": {
+        "value": 0,
+        "unit": "usd",
+        "source_url": "https://help.myfundedfutures.com/en/articles/15070844-flex-plan-25-000-a-comprehensive-guide",
+        "verified": "2026-10-16",
+        "status": "not_stated"
+      },
+      "drawdown_after_payout": {
+        "value": {
+          "after": "first_payout",
+          "floor_above_start": 100
+        },
+        "unit": "payout_lock",
+        "source_url": "https://help.myfundedfutures.com/en/articles/15070844-flex-plan-25-000-a-comprehensive-guide",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "daily_loss_limit": {
+        "value": null,
+        "unit": "usd",
+        "source_url": "https://help.myfundedfutures.com/en/articles/15070844-flex-plan-25-000-a-comprehensive-guide",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "max_contracts": {
+        "value": null,
+        "unit": "contracts",
+        "source_url": "https://help.myfundedfutures.com/en/articles/15070844-flex-plan-25-000-a-comprehensive-guide",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "contract_scaling": {
+        "value": [
+          {
+            "profit_above": 0,
+            "max_contracts": 1
+          },
+          {
+            "profit_above": 750,
+            "max_contracts": 2
+          }
+        ],
+        "unit": "contract_scaling",
+        "source_url": "https://help.myfundedfutures.com/en/articles/15070844-flex-plan-25-000-a-comprehensive-guide",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "contract_growth": {
+        "value": null,
+        "unit": "contract_growth",
+        "source_url": "https://help.myfundedfutures.com/en/articles/15070844-flex-plan-25-000-a-comprehensive-guide",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "reduced_size_until_buffer": {
+        "value": null,
+        "unit": "reduced_size",
+        "source_url": "https://help.myfundedfutures.com/en/articles/15070844-flex-plan-25-000-a-comprehensive-guide",
+        "verified": "2026-10-16",
+        "status": "verified"
+      }
+    },
+    "payouts": {
+      "min_trading_days": {
+        "value": null,
+        "unit": "trading_days",
+        "source_url": "https://help.myfundedfutures.com/en/articles/15070844-flex-plan-25-000-a-comprehensive-guide",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "min_calendar_days_between": {
+        "value": null,
+        "unit": "calendar_days",
+        "source_url": "https://help.myfundedfutures.com/en/articles/15070844-flex-plan-25-000-a-comprehensive-guide",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "min_winning_days": {
+        "value": 5,
+        "unit": "trading_days",
+        "source_url": "https://help.myfundedfutures.com/en/articles/15070844-flex-plan-25-000-a-comprehensive-guide",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "winning_day_min_profit": {
+        "value": 100,
+        "unit": "usd",
+        "source_url": "https://help.myfundedfutures.com/en/articles/15070844-flex-plan-25-000-a-comprehensive-guide",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "consistency_max_day_pct": {
+        "value": null,
+        "unit": "percent",
+        "source_url": "https://help.myfundedfutures.com/en/articles/15070844-flex-plan-25-000-a-comprehensive-guide",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "profit_basis": {
+        "value": "since_last_payout",
+        "unit": "choice",
+        "source_url": "https://help.myfundedfutures.com/en/articles/15070844-flex-plan-25-000-a-comprehensive-guide",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "min_profit": {
+        "value": 250,
+        "unit": "usd",
+        "source_url": "https://help.myfundedfutures.com/en/articles/15070844-flex-plan-25-000-a-comprehensive-guide",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "buffer": {
+        "value": 0,
+        "unit": "usd",
+        "source_url": "https://help.myfundedfutures.com/en/articles/15070844-flex-plan-25-000-a-comprehensive-guide",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "max_payout": {
+        "value": 1000,
+        "unit": "usd",
+        "source_url": "https://help.myfundedfutures.com/en/articles/15070844-flex-plan-25-000-a-comprehensive-guide",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "max_payout_pct_of_profit": {
+        "value": 50,
+        "unit": "percent",
+        "source_url": "https://help.myfundedfutures.com/en/articles/15070844-flex-plan-25-000-a-comprehensive-guide",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "max_payout_pct_of_balance": {
+        "value": null,
+        "unit": "percent",
+        "source_url": "https://help.myfundedfutures.com/en/articles/15070844-flex-plan-25-000-a-comprehensive-guide",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "max_payout_multiple_of_recent_profit": {
+        "value": null,
+        "unit": "multiple",
+        "source_url": "https://help.myfundedfutures.com/en/articles/15070844-flex-plan-25-000-a-comprehensive-guide",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "profit_split_pct": {
+        "value": 80,
+        "unit": "percent",
+        "source_url": "https://help.myfundedfutures.com/en/articles/15070844-flex-plan-25-000-a-comprehensive-guide",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "lifetime_max_payouts": {
+        "value": 5,
+        "unit": "count",
+        "source_url": "https://help.myfundedfutures.com/en/articles/15070844-flex-plan-25-000-a-comprehensive-guide",
+        "verified": "2026-10-17",
+        "status": "verified"
+      },
+      "lifetime_max_payout_usd": {
+        "value": 100000,
+        "unit": "usd",
+        "source_url": "https://help.myfundedfutures.com/en/articles/15070844-flex-plan-25-000-a-comprehensive-guide",
+        "verified": "2026-10-17",
+        "status": "verified"
+      }
+    }
+  },
+  "prices": {
+    "evaluation_fee": {
+      "value": 95,
+      "unit": "usd",
+      "source_url": "https://help.myfundedfutures.com/en/articles/15070844-flex-plan-25-000-a-comprehensive-guide",
+      "verified": "2026-10-16",
+      "status": "not_stated"
+    },
+    "recurring_fee": {
+      "value": 95,
+      "unit": "usd",
+      "source_url": "https://help.myfundedfutures.com/en/articles/15070844-flex-plan-25-000-a-comprehensive-guide",
+      "verified": "2026-10-16",
+      "status": "not_stated"
+    },
+    "recurring_fee_every_days": {
+      "value": 30,
+      "unit": "calendar_days",
+      "source_url": "https://help.myfundedfutures.com/en/articles/15070844-flex-plan-25-000-a-comprehensive-guide",
+      "verified": "2026-10-16",
+      "status": "not_stated"
+    },
+    "reset_fee": {
+      "value": 95,
+      "unit": "usd",
+      "source_url": "https://help.myfundedfutures.com/en/articles/15070844-flex-plan-25-000-a-comprehensive-guide",
+      "verified": "2026-10-16",
+      "status": "not_stated"
+    },
+    "activation_fee": {
+      "value": 0,
+      "unit": "usd",
+      "source_url": "https://help.myfundedfutures.com/en/articles/15070844-flex-plan-25-000-a-comprehensive-guide",
+      "verified": "2026-10-16",
+      "status": "verified"
+    }
+  },
+  "simulation_notes": [
+    "the live transition (5 consecutive payouts / $100k) is out of scope",
+    "no reset price is on record for Flex (no longer sold); the sim charges a $95 reset, the monthly price, on a breach"
+  ],
+  "generated": {
+    "engine_id": "mffu-flex-25k",
+    "engine_sha256": "83a05ab8be6e35b82b2318bf4497e737948e4aae814e393ce64778efa3bf4063",
+    "values_sha256": "c5e36cb5b2cba5f3178d8563309f52470a8383ec0c28fbfbf8fdf4da251337c1"
+  }
+}

@@ -1,0 +1,361 @@
+{
+  "$schema": "../../schema.json",
+  "id": "apex/eod-25k",
+  "firm": {
+    "slug": "apex",
+    "name": "Apex"
+  },
+  "plan": {
+    "slug": "eod-25k",
+    "name": "EOD 25K",
+    "status": "active",
+    "source_url": "https://apextraderfunding.com/"
+  },
+  "rules_verified": "2026-10-16",
+  "prices_verified": "2026-10-16",
+  "rules": {
+    "account": {
+      "size": {
+        "value": 25000,
+        "unit": "usd",
+        "source_url": "https://apextraderfunding.com/",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "instant_funding": {
+        "value": false,
+        "unit": "flag",
+        "source_url": "https://apextraderfunding.com/",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "trading_day_start": {
+        "value": "18:00",
+        "unit": "clock_new_york",
+        "source_url": "https://apextraderfunding.com/help-center/getting-started/futures-trading-times/",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "trading_hours": {
+        "value": {
+          "start": "18:00",
+          "end": "16:59"
+        },
+        "unit": "time_window",
+        "source_url": "https://apextraderfunding.com/help-center/getting-started/futures-trading-times/",
+        "verified": "2026-10-16",
+        "status": "verified"
+      }
+    },
+    "evaluation": {
+      "profit_target": {
+        "value": 1500,
+        "unit": "usd",
+        "source_url": "https://apextraderfunding.com/help-center/eod-trailing-drawdown-accounts/eod-evaluations/",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "max_drawdown": {
+        "value": 1000,
+        "unit": "usd",
+        "source_url": "https://apextraderfunding.com/help-center/eod-trailing-drawdown-accounts/eod-evaluations/",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "drawdown_type": {
+        "value": "end_of_day",
+        "unit": "choice",
+        "source_url": "https://apextraderfunding.com/help-center/eod-trailing-drawdown-accounts/eod-drawdown-explained/",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "drawdown_stops_at": {
+        "value": "profit_target",
+        "unit": "choice",
+        "source_url": "https://apextraderfunding.com/help-center/eod-trailing-drawdown-accounts/eod-drawdown-explained/",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "daily_loss_limit": {
+        "value": 500,
+        "unit": "usd",
+        "source_url": "https://apextraderfunding.com/help-center/eod-trailing-drawdown-accounts/eod-evaluations/",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "consistency_max_day_pct": {
+        "value": null,
+        "unit": "percent",
+        "source_url": "https://apextraderfunding.com/help-center/eod-trailing-drawdown-accounts/eod-evaluations/",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "min_trading_days": {
+        "value": null,
+        "unit": "trading_days",
+        "source_url": "https://apextraderfunding.com/help-center/eod-trailing-drawdown-accounts/eod-evaluations/",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "time_limit_days": {
+        "value": 30,
+        "unit": "calendar_days",
+        "source_url": "https://apextraderfunding.com/help-center/billing/evaluation-plan-fees-and-access-explained/",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "max_contracts": {
+        "value": 4,
+        "unit": "contracts",
+        "source_url": "https://apextraderfunding.com/help-center/eod-trailing-drawdown-accounts/eod-evaluations/",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "contract_growth": {
+        "value": null,
+        "unit": "contract_growth",
+        "source_url": "https://apextraderfunding.com/help-center/eod-trailing-drawdown-accounts/eod-evaluations/",
+        "verified": "2026-10-16",
+        "status": "verified"
+      }
+    },
+    "funded": {
+      "starting_balance": {
+        "value": 25000,
+        "unit": "usd",
+        "source_url": "https://apextraderfunding.com/",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "max_drawdown": {
+        "value": 1000,
+        "unit": "usd",
+        "source_url": "https://apextraderfunding.com/help-center/eod-trailing-drawdown-accounts/eod-evaluations/",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "drawdown_type": {
+        "value": "end_of_day",
+        "unit": "choice",
+        "source_url": "https://apextraderfunding.com/help-center/eod-trailing-drawdown-accounts/eod-drawdown-explained/",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "drawdown_stops_above_start": {
+        "value": 100,
+        "unit": "usd",
+        "source_url": "https://apextraderfunding.com/help-center/eod-trailing-drawdown-accounts/eod-drawdown-explained/",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "drawdown_after_payout": {
+        "value": null,
+        "unit": "payout_lock",
+        "source_url": "https://apextraderfunding.com/help-center/eod-trailing-drawdown-accounts/eod-drawdown-explained/",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "daily_loss_limit": {
+        "value": 500,
+        "unit": "usd",
+        "source_url": "https://apextraderfunding.com/help-center/additional-helpful-items/daily-loss-limit-explained/",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "max_contracts": {
+        "value": null,
+        "unit": "contracts",
+        "source_url": "https://apextraderfunding.com/help-center/additional-helpful-items/scaling-levels-pa-explained/",
+        "verified": "2026-10-17",
+        "status": "verified"
+      },
+      "contract_scaling": {
+        "value": [
+          {
+            "profit_above": 0,
+            "max_contracts": 1
+          },
+          {
+            "profit_above": 1000,
+            "max_contracts": 2
+          },
+          {
+            "profit_above": 2000,
+            "max_contracts": 2
+          }
+        ],
+        "unit": "contract_scaling",
+        "source_url": "https://apextraderfunding.com/help-center/additional-helpful-items/scaling-levels-pa-explained/",
+        "verified": "2026-10-18",
+        "status": "verified"
+      },
+      "contract_growth": {
+        "value": null,
+        "unit": "contract_growth",
+        "source_url": "https://apextraderfunding.com/help-center/eod-trailing-drawdown-accounts/eod-performance-accounts-pa/",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "reduced_size_until_buffer": {
+        "value": null,
+        "unit": "reduced_size",
+        "source_url": "https://apextraderfunding.com/help-center/additional-helpful-items/scaling-levels-pa-explained/",
+        "verified": "2026-10-18",
+        "status": "verified"
+      }
+    },
+    "payouts": {
+      "min_trading_days": {
+        "value": null,
+        "unit": "trading_days",
+        "source_url": "https://apextraderfunding.com/help-center/eod-trailing-drawdown-accounts/eod-payouts/",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "min_calendar_days_between": {
+        "value": null,
+        "unit": "calendar_days",
+        "source_url": "https://apextraderfunding.com/help-center/eod-trailing-drawdown-accounts/eod-payouts/",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "min_winning_days": {
+        "value": 5,
+        "unit": "trading_days",
+        "source_url": "https://apextraderfunding.com/help-center/eod-trailing-drawdown-accounts/eod-payouts/",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "winning_day_min_profit": {
+        "value": 100,
+        "unit": "usd",
+        "source_url": "https://apextraderfunding.com/help-center/eod-trailing-drawdown-accounts/eod-payouts/",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "consistency_max_day_pct": {
+        "value": 50,
+        "unit": "percent",
+        "source_url": "https://apextraderfunding.com/help-center/additional-helpful-items/50-consistency-requirement/",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "profit_basis": {
+        "value": "since_last_payout",
+        "unit": "choice",
+        "source_url": "https://apextraderfunding.com/help-center/eod-trailing-drawdown-accounts/eod-payouts/",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "min_profit": {
+        "value": [
+          1600,
+          500
+        ],
+        "unit": "usd",
+        "source_url": "https://apextraderfunding.com/help-center/eod-trailing-drawdown-accounts/eod-payouts/",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "buffer": {
+        "value": 1100,
+        "unit": "usd",
+        "source_url": "https://apextraderfunding.com/help-center/eod-trailing-drawdown-accounts/eod-payouts/",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "max_payout": {
+        "value": 1000,
+        "unit": "usd",
+        "source_url": "https://apextraderfunding.com/help-center/eod-trailing-drawdown-accounts/eod-payouts/",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "max_payout_pct_of_profit": {
+        "value": null,
+        "unit": "percent",
+        "source_url": "https://apextraderfunding.com/help-center/eod-trailing-drawdown-accounts/eod-payouts/",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "max_payout_pct_of_balance": {
+        "value": null,
+        "unit": "percent",
+        "source_url": "https://apextraderfunding.com/help-center/eod-trailing-drawdown-accounts/eod-payouts/",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "max_payout_multiple_of_recent_profit": {
+        "value": null,
+        "unit": "multiple",
+        "source_url": "https://apextraderfunding.com/help-center/eod-trailing-drawdown-accounts/eod-payouts/",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "profit_split_pct": {
+        "value": 100,
+        "unit": "percent",
+        "source_url": "https://apextraderfunding.com/help-center/eod-trailing-drawdown-accounts/eod-payouts/",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "lifetime_max_payouts": {
+        "value": 6,
+        "unit": "count",
+        "source_url": "https://apextraderfunding.com/help-center/eod-trailing-drawdown-accounts/eod-payouts/",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "lifetime_max_payout_usd": {
+        "value": null,
+        "unit": "usd",
+        "source_url": "https://apextraderfunding.com/help-center/eod-trailing-drawdown-accounts/eod-payouts/",
+        "verified": "2026-10-16",
+        "status": "verified"
+      }
+    }
+  },
+  "prices": {
+    "evaluation_fee": {
+      "value": 49,
+      "unit": "usd",
+      "source_url": "https://apextraderfunding.com/",
+      "verified": "2026-10-18",
+      "status": "verified"
+    },
+    "recurring_fee": {
+      "value": null,
+      "unit": "usd",
+      "source_url": "https://apextraderfunding.com/help-center/billing/evaluation-plan-fees-and-access-explained/",
+      "verified": "2026-10-16",
+      "status": "verified"
+    },
+    "recurring_fee_every_days": {
+      "value": null,
+      "unit": "calendar_days",
+      "source_url": "https://apextraderfunding.com/help-center/billing/evaluation-plan-fees-and-access-explained/",
+      "verified": "2026-10-16",
+      "status": "verified"
+    },
+    "reset_fee": {
+      "value": null,
+      "unit": "usd",
+      "source_url": "https://apextraderfunding.com/help-center/billing/evaluation-plan-fees-and-access-explained/",
+      "verified": "2026-10-16",
+      "status": "verified"
+    },
+    "activation_fee": {
+      "value": 109,
+      "unit": "usd",
+      "source_url": "https://apextraderfunding.com/",
+      "verified": "2026-10-18",
+      "status": "verified"
+    }
+  },
+  "simulation_notes": [],
+  "generated": {
+    "engine_id": "apex-eod-25k",
+    "engine_sha256": "01a7fcc093db65c1d491d8c17a52ac4bf267f8f9fe9bec83948ef9fbbc4bf06c",
+    "values_sha256": "cef1ae57affe3fe5d5dd528502f7516d541be8deaea987e0b51ba76baede5a67"
+  }
+}

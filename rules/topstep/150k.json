@@ -1,0 +1,372 @@
+{
+  "$schema": "../../schema.json",
+  "id": "topstep/150k",
+  "firm": {
+    "slug": "topstep",
+    "name": "Topstep"
+  },
+  "plan": {
+    "slug": "150k",
+    "name": "150K Combine",
+    "status": "active",
+    "source_url": "https://www.topstep.com/topstep-prop"
+  },
+  "rules_verified": "2026-10-16",
+  "prices_verified": "2026-10-21",
+  "rules": {
+    "account": {
+      "size": {
+        "value": 150000,
+        "unit": "usd",
+        "source_url": "https://www.topstep.com/topstep-prop",
+        "verified": "2026-10-21",
+        "status": "verified"
+      },
+      "instant_funding": {
+        "value": false,
+        "unit": "flag",
+        "source_url": "https://www.topstep.com/topstep-prop",
+        "verified": "2026-10-21",
+        "status": "verified"
+      },
+      "trading_day_start": {
+        "value": "18:00",
+        "unit": "clock_new_york",
+        "source_url": "https://help.topstep.com/en/articles/8284197-trading-combine-parameters",
+        "verified": "2026-10-21",
+        "status": "verified"
+      },
+      "trading_hours": {
+        "value": {
+          "start": "18:00",
+          "end": "16:10"
+        },
+        "unit": "time_window",
+        "source_url": "https://help.topstep.com/en/articles/8284206-when-and-what-products-can-i-trade",
+        "verified": "2026-10-21",
+        "status": "verified"
+      }
+    },
+    "evaluation": {
+      "profit_target": {
+        "value": 9000,
+        "unit": "usd",
+        "source_url": "https://help.topstep.com/en/articles/8284208-consistency-at-topstep",
+        "verified": "2026-10-21",
+        "status": "verified"
+      },
+      "max_drawdown": {
+        "value": 4500,
+        "unit": "usd",
+        "source_url": "https://help.topstep.com/en/articles/8284204-what-is-the-maximum-loss-limit",
+        "verified": "2026-10-21",
+        "status": "verified"
+      },
+      "drawdown_type": {
+        "value": "end_of_day",
+        "unit": "choice",
+        "source_url": "https://help.topstep.com/en/articles/8284204-what-is-the-maximum-loss-limit",
+        "verified": "2026-10-21",
+        "status": "verified"
+      },
+      "drawdown_stops_at": {
+        "value": "starting_balance",
+        "unit": "choice",
+        "source_url": "https://help.topstep.com/en/articles/8284204-what-is-the-maximum-loss-limit",
+        "verified": "2026-10-21",
+        "status": "verified"
+      },
+      "daily_loss_limit": {
+        "value": null,
+        "unit": "usd",
+        "source_url": "https://help.topstep.com/en/articles/10490293-daily-loss-limit-in-the-trading-combine-and-express-funded-account",
+        "verified": "2026-10-21",
+        "status": "verified"
+      },
+      "consistency_max_day_pct": {
+        "value": 55,
+        "unit": "percent",
+        "source_url": "https://help.topstep.com/en/articles/8284208-consistency-at-topstep",
+        "verified": "2026-10-21",
+        "status": "verified"
+      },
+      "min_trading_days": {
+        "value": 2,
+        "unit": "trading_days",
+        "source_url": "https://help.topstep.com/en/articles/8284197-trading-combine-parameters",
+        "verified": "2026-10-21",
+        "status": "verified"
+      },
+      "time_limit_days": {
+        "value": null,
+        "unit": "calendar_days",
+        "source_url": "https://www.topstep.com/topstep-prop",
+        "verified": "2026-10-21",
+        "status": "verified"
+      },
+      "max_contracts": {
+        "value": 15,
+        "unit": "contracts",
+        "source_url": "https://help.topstep.com/en/articles/8284197-trading-combine-parameters",
+        "verified": "2026-10-21",
+        "status": "verified"
+      },
+      "contract_growth": {
+        "value": null,
+        "unit": "contract_growth",
+        "source_url": "https://help.topstep.com/en/articles/8284197-trading-combine-parameters",
+        "verified": "2026-10-21",
+        "status": "verified"
+      }
+    },
+    "funded": {
+      "starting_balance": {
+        "value": 0,
+        "unit": "usd",
+        "source_url": "https://help.topstep.com/en/articles/8284215-express-funded-account-parameters",
+        "verified": "2026-10-21",
+        "status": "verified"
+      },
+      "max_drawdown": {
+        "value": 4500,
+        "unit": "usd",
+        "source_url": "https://help.topstep.com/en/articles/8284204-what-is-the-maximum-loss-limit",
+        "verified": "2026-10-21",
+        "status": "verified"
+      },
+      "drawdown_type": {
+        "value": "end_of_day",
+        "unit": "choice",
+        "source_url": "https://www.topstep.com/express-funded-account-rules",
+        "verified": "2026-10-21",
+        "status": "verified"
+      },
+      "drawdown_stops_above_start": {
+        "value": 0,
+        "unit": "usd",
+        "source_url": "https://help.topstep.com/en/articles/8284204-what-is-the-maximum-loss-limit",
+        "verified": "2026-10-21",
+        "status": "verified"
+      },
+      "drawdown_after_payout": {
+        "value": {
+          "after": "every_payout",
+          "floor_above_start": 0
+        },
+        "unit": "payout_lock",
+        "source_url": "https://help.topstep.com/en/articles/8284233-topstep-payout-policy",
+        "verified": "2026-10-21",
+        "status": "verified"
+      },
+      "daily_loss_limit": {
+        "value": null,
+        "unit": "usd",
+        "source_url": "https://help.topstep.com/en/articles/10490293-daily-loss-limit-in-the-trading-combine-and-express-funded-account",
+        "verified": "2026-10-21",
+        "status": "verified"
+      },
+      "max_contracts": {
+        "value": null,
+        "unit": "contracts",
+        "source_url": "https://help.topstep.com/en/articles/8284223-what-is-the-scaling-plan",
+        "verified": "2026-10-21",
+        "status": "verified"
+      },
+      "contract_scaling": {
+        "value": [
+          {
+            "profit_above": 0,
+            "max_contracts": 3
+          },
+          {
+            "profit_above": 1500,
+            "max_contracts": 4
+          },
+          {
+            "profit_above": 2000,
+            "max_contracts": 5
+          },
+          {
+            "profit_above": 3000,
+            "max_contracts": 10
+          },
+          {
+            "profit_above": 4500,
+            "max_contracts": 15
+          }
+        ],
+        "unit": "contract_scaling",
+        "source_url": "https://help.topstep.com/en/articles/8284223-what-is-the-scaling-plan",
+        "verified": "2026-10-21",
+        "status": "verified"
+      },
+      "contract_growth": {
+        "value": null,
+        "unit": "contract_growth",
+        "source_url": "https://help.topstep.com/en/articles/8284223-what-is-the-scaling-plan",
+        "verified": "2026-10-21",
+        "status": "verified"
+      },
+      "reduced_size_until_buffer": {
+        "value": null,
+        "unit": "reduced_size",
+        "source_url": "https://help.topstep.com/en/articles/8284223-what-is-the-scaling-plan",
+        "verified": "2026-10-21",
+        "status": "verified"
+      }
+    },
+    "payouts": {
+      "min_trading_days": {
+        "value": null,
+        "unit": "trading_days",
+        "source_url": "https://help.topstep.com/en/articles/8284233-topstep-payout-policy",
+        "verified": "2026-10-21",
+        "status": "verified"
+      },
+      "min_calendar_days_between": {
+        "value": null,
+        "unit": "calendar_days",
+        "source_url": "https://help.topstep.com/en/articles/8284233-topstep-payout-policy",
+        "verified": "2026-10-21",
+        "status": "verified"
+      },
+      "min_winning_days": {
+        "value": 5,
+        "unit": "trading_days",
+        "source_url": "https://help.topstep.com/en/articles/8284233-topstep-payout-policy",
+        "verified": "2026-10-21",
+        "status": "verified"
+      },
+      "winning_day_min_profit": {
+        "value": 150,
+        "unit": "usd",
+        "source_url": "https://help.topstep.com/en/articles/8284233-topstep-payout-policy",
+        "verified": "2026-10-21",
+        "status": "verified"
+      },
+      "consistency_max_day_pct": {
+        "value": null,
+        "unit": "percent",
+        "source_url": "https://help.topstep.com/en/articles/8284233-topstep-payout-policy",
+        "verified": "2026-10-21",
+        "status": "verified"
+      },
+      "profit_basis": {
+        "value": "since_last_payout",
+        "unit": "choice",
+        "source_url": "https://help.topstep.com/en/articles/8284233-topstep-payout-policy",
+        "verified": "2026-10-21",
+        "status": "verified"
+      },
+      "min_profit": {
+        "value": 125,
+        "unit": "usd",
+        "source_url": "https://help.topstep.com/en/articles/8284233-topstep-payout-policy",
+        "verified": "2026-10-21",
+        "status": "verified"
+      },
+      "buffer": {
+        "value": 0,
+        "unit": "usd",
+        "source_url": "https://help.topstep.com/en/articles/8284233-topstep-payout-policy",
+        "verified": "2026-10-21",
+        "status": "verified"
+      },
+      "max_payout": {
+        "value": 5000,
+        "unit": "usd",
+        "source_url": "https://help.topstep.com/en/articles/8284233-topstep-payout-policy",
+        "verified": "2026-10-21",
+        "status": "verified"
+      },
+      "max_payout_pct_of_profit": {
+        "value": 50,
+        "unit": "percent",
+        "source_url": "https://help.topstep.com/en/articles/8284233-topstep-payout-policy",
+        "verified": "2026-10-21",
+        "status": "verified"
+      },
+      "max_payout_pct_of_balance": {
+        "value": 50,
+        "unit": "percent",
+        "source_url": "https://help.topstep.com/en/articles/8284233-topstep-payout-policy",
+        "verified": "2026-10-21",
+        "status": "verified"
+      },
+      "max_payout_multiple_of_recent_profit": {
+        "value": null,
+        "unit": "multiple",
+        "source_url": "https://help.topstep.com/en/articles/8284233-topstep-payout-policy",
+        "verified": "2026-10-21",
+        "status": "verified"
+      },
+      "profit_split_pct": {
+        "value": 90,
+        "unit": "percent",
+        "source_url": "https://help.topstep.com/en/articles/8284233-topstep-payout-policy",
+        "verified": "2026-10-21",
+        "status": "verified"
+      },
+      "lifetime_max_payouts": {
+        "value": null,
+        "unit": "count",
+        "source_url": "https://help.topstep.com/en/articles/8284233-topstep-payout-policy",
+        "verified": "2026-10-16",
+        "status": "not_stated"
+      },
+      "lifetime_max_payout_usd": {
+        "value": null,
+        "unit": "usd",
+        "source_url": "https://help.topstep.com/en/articles/8284233-topstep-payout-policy",
+        "verified": "2026-10-16",
+        "status": "not_stated"
+      }
+    }
+  },
+  "prices": {
+    "evaluation_fee": {
+      "value": 199,
+      "unit": "usd",
+      "source_url": "https://help.topstep.com/en/articles/14289835-topstep-pricing-and-payment-questions",
+      "verified": "2026-10-21",
+      "status": "verified"
+    },
+    "recurring_fee": {
+      "value": 199,
+      "unit": "usd",
+      "source_url": "https://help.topstep.com/en/articles/14289835-topstep-pricing-and-payment-questions",
+      "verified": "2026-10-21",
+      "status": "verified"
+    },
+    "recurring_fee_every_days": {
+      "value": 30,
+      "unit": "calendar_days",
+      "source_url": "https://help.topstep.com/en/articles/14289835-topstep-pricing-and-payment-questions",
+      "verified": "2026-10-21",
+      "status": "verified"
+    },
+    "reset_fee": {
+      "value": 199,
+      "unit": "usd",
+      "source_url": "https://help.topstep.com/en/articles/14289835-topstep-pricing-and-payment-questions",
+      "verified": "2026-10-21",
+      "status": "verified"
+    },
+    "activation_fee": {
+      "value": 149,
+      "unit": "usd",
+      "source_url": "https://help.topstep.com/en/articles/14289835-topstep-pricing-and-payment-questions",
+      "verified": "2026-10-21",
+      "status": "verified"
+    }
+  },
+  "simulation_notes": [
+    "the optional Daily Loss Limit add-on is not included in this preset",
+    "reset credits (1 free reset banked per rebill) are not modeled; resets charge the rebill price"
+  ],
+  "generated": {
+    "engine_id": "topstep-150k",
+    "engine_sha256": "0c9fbbb10081c4a7de2a3db7cd6ec370c55479ef4a8d82f29ad6bf8b76ea3f7e",
+    "values_sha256": "d332ec87f6d80d32ae4edbc35a969b47e1e1e23c80040c11842135db57718ddf"
+  }
+}

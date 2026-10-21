@@ -1,0 +1,16 @@
+{
+  "name": "prop-firm-rules",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Futures prop firm rules as open JSON, each rule cited to the firm's own page and dated.",
+  "type": "module",
+  "license": "SEE LICENSE IN LICENSE",
+  "author": "AlgoLift LLC (https://www.algolift.ai)",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "validate": "node scripts/validate.mjs",
+    "test": "node --test"
+  }
+}

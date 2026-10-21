@@ -1,0 +1,39 @@
+name: validate
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  schedule:
+    # Daily, so a rule that ages past the re-check window fails even when nothing changed.
+    - cron: "17 6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Validator tests
+        run: node --test
+      - name: Validate the data
+        # Schema, a source and a date on every rule, nothing older than the re-check window
+        # (prop-rules.config.json), and every file matching engine/catalog.json.
+        run: node scripts/validate.mjs
+
+  secrets:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Scan for secrets
+        uses: trufflesecurity/trufflehog@v3.97.9
+        with:
+          extra_args: --results=verified,unknown

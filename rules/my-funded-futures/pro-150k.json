@@ -1,0 +1,355 @@
+{
+  "$schema": "../../schema.json",
+  "id": "my-funded-futures/pro-150k",
+  "firm": {
+    "slug": "my-funded-futures",
+    "name": "My Funded Futures"
+  },
+  "plan": {
+    "slug": "pro-150k",
+    "name": "Pro 150K",
+    "status": "active",
+    "source_url": "https://myfundedfutures.com/plans/pro"
+  },
+  "rules_verified": "2026-10-16",
+  "prices_verified": "2026-10-16",
+  "rules": {
+    "account": {
+      "size": {
+        "value": 150000,
+        "unit": "usd",
+        "source_url": "https://myfundedfutures.com/plans/pro",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "instant_funding": {
+        "value": false,
+        "unit": "flag",
+        "source_url": "https://myfundedfutures.com/plans/pro",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "trading_day_start": {
+        "value": "18:00",
+        "unit": "clock_new_york",
+        "source_url": "https://help.myfundedfutures.com/en/articles/9558251-permitted-times-to-trade",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "trading_hours": {
+        "value": {
+          "start": "18:00",
+          "end": "16:10"
+        },
+        "unit": "time_window",
+        "source_url": "https://help.myfundedfutures.com/en/articles/9558251-permitted-times-to-trade",
+        "verified": "2026-10-16",
+        "status": "verified"
+      }
+    },
+    "evaluation": {
+      "profit_target": {
+        "value": 9000,
+        "unit": "usd",
+        "source_url": "https://help.myfundedfutures.com/en/articles/17573707-comprehensive-look-into-redesigned-pro-plan",
+        "verified": "2026-10-17",
+        "status": "verified"
+      },
+      "max_drawdown": {
+        "value": 4500,
+        "unit": "usd",
+        "source_url": "https://help.myfundedfutures.com/en/articles/17573707-comprehensive-look-into-redesigned-pro-plan",
+        "verified": "2026-10-17",
+        "status": "verified"
+      },
+      "drawdown_type": {
+        "value": "end_of_day",
+        "unit": "choice",
+        "source_url": "https://help.myfundedfutures.com/en/articles/17573707-comprehensive-look-into-redesigned-pro-plan",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "drawdown_stops_at": {
+        "value": "starting_balance",
+        "unit": "choice",
+        "source_url": "https://help.myfundedfutures.com/en/articles/8348565-end-of-day-eod-drawdown-explained",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "daily_loss_limit": {
+        "value": null,
+        "unit": "usd",
+        "source_url": "https://help.myfundedfutures.com/en/articles/17573707-comprehensive-look-into-redesigned-pro-plan",
+        "verified": "2026-10-17",
+        "status": "verified"
+      },
+      "consistency_max_day_pct": {
+        "value": 50,
+        "unit": "percent",
+        "source_url": "https://help.myfundedfutures.com/en/articles/17573707-comprehensive-look-into-redesigned-pro-plan",
+        "verified": "2026-10-17",
+        "status": "verified"
+      },
+      "min_trading_days": {
+        "value": 2,
+        "unit": "trading_days",
+        "source_url": "https://help.myfundedfutures.com/en/articles/17573707-comprehensive-look-into-redesigned-pro-plan",
+        "verified": "2026-10-17",
+        "status": "verified"
+      },
+      "time_limit_days": {
+        "value": null,
+        "unit": "calendar_days",
+        "source_url": "https://myfundedfutures.com/how-it-works",
+        "verified": "2026-10-21",
+        "status": "verified"
+      },
+      "max_contracts": {
+        "value": 9,
+        "unit": "contracts",
+        "source_url": "https://help.myfundedfutures.com/en/articles/17573707-comprehensive-look-into-redesigned-pro-plan",
+        "verified": "2026-10-17",
+        "status": "verified"
+      },
+      "contract_growth": {
+        "value": null,
+        "unit": "contract_growth",
+        "source_url": "https://help.myfundedfutures.com/en/articles/17573707-comprehensive-look-into-redesigned-pro-plan",
+        "verified": "2026-10-16",
+        "status": "verified"
+      }
+    },
+    "funded": {
+      "starting_balance": {
+        "value": 150000,
+        "unit": "usd",
+        "source_url": "https://help.myfundedfutures.com/en/articles/17573707-comprehensive-look-into-redesigned-pro-plan",
+        "verified": "2026-10-18",
+        "status": "verified"
+      },
+      "max_drawdown": {
+        "value": 4500,
+        "unit": "usd",
+        "source_url": "https://help.myfundedfutures.com/en/articles/17573707-comprehensive-look-into-redesigned-pro-plan",
+        "verified": "2026-10-17",
+        "status": "verified"
+      },
+      "drawdown_type": {
+        "value": "end_of_day",
+        "unit": "choice",
+        "source_url": "https://help.myfundedfutures.com/en/articles/17573707-comprehensive-look-into-redesigned-pro-plan",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "drawdown_stops_above_start": {
+        "value": 0,
+        "unit": "usd",
+        "source_url": "https://myfundedfutures.com/plans/pro",
+        "verified": "2026-10-16",
+        "status": "not_stated"
+      },
+      "drawdown_after_payout": {
+        "value": {
+          "after": "first_payout",
+          "floor_above_start": 100
+        },
+        "unit": "payout_lock",
+        "source_url": "https://myfundedfutures.com/plans/pro",
+        "verified": "2026-10-17",
+        "status": "verified"
+      },
+      "daily_loss_limit": {
+        "value": null,
+        "unit": "usd",
+        "source_url": "https://myfundedfutures.com/plans/pro",
+        "verified": "2026-10-17",
+        "status": "verified"
+      },
+      "max_contracts": {
+        "value": 9,
+        "unit": "contracts",
+        "source_url": "https://help.myfundedfutures.com/en/articles/17573707-comprehensive-look-into-redesigned-pro-plan",
+        "verified": "2026-10-17",
+        "status": "verified"
+      },
+      "contract_scaling": {
+        "value": null,
+        "unit": "contract_scaling",
+        "source_url": "https://help.myfundedfutures.com/en/articles/17573707-comprehensive-look-into-redesigned-pro-plan",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "contract_growth": {
+        "value": null,
+        "unit": "contract_growth",
+        "source_url": "https://help.myfundedfutures.com/en/articles/17573707-comprehensive-look-into-redesigned-pro-plan",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "reduced_size_until_buffer": {
+        "value": null,
+        "unit": "reduced_size",
+        "source_url": "https://help.myfundedfutures.com/en/articles/17573707-comprehensive-look-into-redesigned-pro-plan",
+        "verified": "2026-10-16",
+        "status": "verified"
+      }
+    },
+    "payouts": {
+      "min_trading_days": {
+        "value": null,
+        "unit": "trading_days",
+        "source_url": "https://myfundedfutures.com/plans/pro",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "min_calendar_days_between": {
+        "value": 14,
+        "unit": "calendar_days",
+        "source_url": "https://help.myfundedfutures.com/en/articles/13745661-payout-policy-overview-best-and-fastest-prop-firm-payouts",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "min_winning_days": {
+        "value": null,
+        "unit": "trading_days",
+        "source_url": "https://myfundedfutures.com/plans/pro",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "winning_day_min_profit": {
+        "value": null,
+        "unit": "usd",
+        "source_url": "https://myfundedfutures.com/plans/pro",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "consistency_max_day_pct": {
+        "value": null,
+        "unit": "percent",
+        "source_url": "https://myfundedfutures.com/plans/pro",
+        "verified": "2026-10-17",
+        "status": "verified"
+      },
+      "profit_basis": {
+        "value": "since_funded",
+        "unit": "choice",
+        "source_url": "https://myfundedfutures.com/plans/pro",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "min_profit": {
+        "value": [
+          5600,
+          1000
+        ],
+        "unit": "usd",
+        "source_url": "https://myfundedfutures.com/plans/pro",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "buffer": {
+        "value": 4600,
+        "unit": "usd",
+        "source_url": "https://myfundedfutures.com/plans/pro",
+        "verified": "2026-10-17",
+        "status": "verified"
+      },
+      "max_payout": {
+        "value": 100000,
+        "unit": "usd",
+        "source_url": "https://help.myfundedfutures.com/en/articles/13745661-payout-policy-overview-best-and-fastest-prop-firm-payouts",
+        "verified": "2026-10-17",
+        "status": "verified"
+      },
+      "max_payout_pct_of_profit": {
+        "value": null,
+        "unit": "percent",
+        "source_url": "https://help.myfundedfutures.com/en/articles/17573707-comprehensive-look-into-redesigned-pro-plan",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "max_payout_pct_of_balance": {
+        "value": null,
+        "unit": "percent",
+        "source_url": "https://help.myfundedfutures.com/en/articles/17573707-comprehensive-look-into-redesigned-pro-plan",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "max_payout_multiple_of_recent_profit": {
+        "value": null,
+        "unit": "multiple",
+        "source_url": "https://help.myfundedfutures.com/en/articles/17573707-comprehensive-look-into-redesigned-pro-plan",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "profit_split_pct": {
+        "value": 80,
+        "unit": "percent",
+        "source_url": "https://myfundedfutures.com/plans/pro",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "lifetime_max_payouts": {
+        "value": null,
+        "unit": "count",
+        "source_url": "https://help.myfundedfutures.com/en/articles/17573707-comprehensive-look-into-redesigned-pro-plan",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "lifetime_max_payout_usd": {
+        "value": 100000,
+        "unit": "usd",
+        "source_url": "https://myfundedfutures.com/plans/pro",
+        "verified": "2026-10-16",
+        "status": "verified"
+      }
+    }
+  },
+  "prices": {
+    "evaluation_fee": {
+      "value": 334,
+      "unit": "usd",
+      "source_url": "https://myfundedfutures.com/plans/pro",
+      "verified": "2026-10-18",
+      "status": "verified"
+    },
+    "recurring_fee": {
+      "value": null,
+      "unit": "usd",
+      "source_url": "https://myfundedfutures.com/plans/pro",
+      "verified": "2026-10-17",
+      "status": "verified"
+    },
+    "recurring_fee_every_days": {
+      "value": null,
+      "unit": "calendar_days",
+      "source_url": "https://myfundedfutures.com/plans/pro",
+      "verified": "2026-10-18",
+      "status": "verified"
+    },
+    "reset_fee": {
+      "value": 347,
+      "unit": "usd",
+      "source_url": "https://help.myfundedfutures.com/en/articles/16596406-understanding-the-difference-between-account-resets-and-renewals",
+      "verified": "2026-10-16",
+      "status": "not_stated"
+    },
+    "activation_fee": {
+      "value": 0,
+      "unit": "usd",
+      "source_url": "https://myfundedfutures.com/plans/pro",
+      "verified": "2026-10-17",
+      "status": "verified"
+    }
+  },
+  "simulation_notes": [
+    "the one-time early withdrawal (≤60% of profits inside the buffer) is not modeled",
+    "no reset price is published for the one-time Pro evaluation and the pages conflict on whether a breach can be reset; the sim charges an unconfirmed $347 reset on a breach",
+    "the review for live (after three consecutive payouts, $20,000 of profit, the $100,000 payout cap or an invitation) is out of scope; the sim closes the account at the $100,000 payout cap"
+  ],
+  "generated": {
+    "engine_id": "mffu-pro-150k",
+    "engine_sha256": "c63ffdb1191e4e8ef22d957fda1db7cdbe2e47f1aaa4cbec714d8e71c1695880",
+    "values_sha256": "9177694d2aa4966fe8cc85edf8de71a7cf39580883639a3146ce97037f41cc54"
+  }
+}

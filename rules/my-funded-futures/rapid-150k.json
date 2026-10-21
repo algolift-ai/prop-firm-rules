@@ -1,0 +1,347 @@
+{
+  "$schema": "../../schema.json",
+  "id": "my-funded-futures/rapid-150k",
+  "firm": {
+    "slug": "my-funded-futures",
+    "name": "My Funded Futures"
+  },
+  "plan": {
+    "slug": "rapid-150k",
+    "name": "Rapid 150K",
+    "status": "active",
+    "source_url": "https://myfundedfutures.com/plans/rapid"
+  },
+  "rules_verified": "2026-10-16",
+  "prices_verified": "2026-10-16",
+  "rules": {
+    "account": {
+      "size": {
+        "value": 150000,
+        "unit": "usd",
+        "source_url": "https://myfundedfutures.com/plans/rapid",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "instant_funding": {
+        "value": false,
+        "unit": "flag",
+        "source_url": "https://myfundedfutures.com/plans/rapid",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "trading_day_start": {
+        "value": "18:00",
+        "unit": "clock_new_york",
+        "source_url": "https://help.myfundedfutures.com/en/articles/9558251-permitted-times-to-trade",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "trading_hours": {
+        "value": {
+          "start": "18:00",
+          "end": "16:10"
+        },
+        "unit": "time_window",
+        "source_url": "https://help.myfundedfutures.com/en/articles/9558251-permitted-times-to-trade",
+        "verified": "2026-10-16",
+        "status": "verified"
+      }
+    },
+    "evaluation": {
+      "profit_target": {
+        "value": 9000,
+        "unit": "usd",
+        "source_url": "https://help.myfundedfutures.com/en/articles/13286582-rapid-plan-150k-a-comprehensive-look",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "max_drawdown": {
+        "value": 4500,
+        "unit": "usd",
+        "source_url": "https://help.myfundedfutures.com/en/articles/13286582-rapid-plan-150k-a-comprehensive-look",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "drawdown_type": {
+        "value": "end_of_day",
+        "unit": "choice",
+        "source_url": "https://help.myfundedfutures.com/en/articles/13286582-rapid-plan-150k-a-comprehensive-look",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "drawdown_stops_at": {
+        "value": "starting_balance",
+        "unit": "choice",
+        "source_url": "https://help.myfundedfutures.com/en/articles/8348565-end-of-day-eod-drawdown-explained",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "daily_loss_limit": {
+        "value": null,
+        "unit": "usd",
+        "source_url": "https://myfundedfutures.com/plans/rapid",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "consistency_max_day_pct": {
+        "value": 50,
+        "unit": "percent",
+        "source_url": "https://help.myfundedfutures.com/en/articles/13286582-rapid-plan-150k-a-comprehensive-look",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "min_trading_days": {
+        "value": 2,
+        "unit": "trading_days",
+        "source_url": "https://help.myfundedfutures.com/en/articles/13286582-rapid-plan-150k-a-comprehensive-look",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "time_limit_days": {
+        "value": null,
+        "unit": "calendar_days",
+        "source_url": "https://myfundedfutures.com/how-it-works",
+        "verified": "2026-10-21",
+        "status": "verified"
+      },
+      "max_contracts": {
+        "value": 10,
+        "unit": "contracts",
+        "source_url": "https://help.myfundedfutures.com/en/articles/13286582-rapid-plan-150k-a-comprehensive-look",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "contract_growth": {
+        "value": null,
+        "unit": "contract_growth",
+        "source_url": "https://help.myfundedfutures.com/en/articles/13286582-rapid-plan-150k-a-comprehensive-look",
+        "verified": "2026-10-16",
+        "status": "verified"
+      }
+    },
+    "funded": {
+      "starting_balance": {
+        "value": 0,
+        "unit": "usd",
+        "source_url": "https://help.myfundedfutures.com/en/articles/13286582-rapid-plan-150k-a-comprehensive-look",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "max_drawdown": {
+        "value": 4500,
+        "unit": "usd",
+        "source_url": "https://help.myfundedfutures.com/en/articles/13286582-rapid-plan-150k-a-comprehensive-look",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "drawdown_type": {
+        "value": "intraday",
+        "unit": "choice",
+        "source_url": "https://help.myfundedfutures.com/en/articles/13286582-rapid-plan-150k-a-comprehensive-look",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "drawdown_stops_above_start": {
+        "value": 100,
+        "unit": "usd",
+        "source_url": "https://help.myfundedfutures.com/en/articles/13286582-rapid-plan-150k-a-comprehensive-look",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "drawdown_after_payout": {
+        "value": null,
+        "unit": "payout_lock",
+        "source_url": "https://help.myfundedfutures.com/en/articles/14116402-rapid-plan-25k-a-comprehensive-look",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "daily_loss_limit": {
+        "value": null,
+        "unit": "usd",
+        "source_url": "https://myfundedfutures.com/plans/rapid",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "max_contracts": {
+        "value": 10,
+        "unit": "contracts",
+        "source_url": "https://help.myfundedfutures.com/en/articles/13286582-rapid-plan-150k-a-comprehensive-look",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "contract_scaling": {
+        "value": null,
+        "unit": "contract_scaling",
+        "source_url": "https://help.myfundedfutures.com/en/articles/13286582-rapid-plan-150k-a-comprehensive-look",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "contract_growth": {
+        "value": null,
+        "unit": "contract_growth",
+        "source_url": "https://help.myfundedfutures.com/en/articles/13286582-rapid-plan-150k-a-comprehensive-look",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "reduced_size_until_buffer": {
+        "value": null,
+        "unit": "reduced_size",
+        "source_url": "https://help.myfundedfutures.com/en/articles/13286582-rapid-plan-150k-a-comprehensive-look",
+        "verified": "2026-10-16",
+        "status": "verified"
+      }
+    },
+    "payouts": {
+      "min_trading_days": {
+        "value": 1,
+        "unit": "trading_days",
+        "source_url": "https://help.myfundedfutures.com/en/articles/13286582-rapid-plan-150k-a-comprehensive-look",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "min_calendar_days_between": {
+        "value": 1,
+        "unit": "calendar_days",
+        "source_url": "https://help.myfundedfutures.com/en/articles/14116402-rapid-plan-25k-a-comprehensive-look",
+        "verified": "2026-10-17",
+        "status": "verified"
+      },
+      "min_winning_days": {
+        "value": null,
+        "unit": "trading_days",
+        "source_url": "https://help.myfundedfutures.com/en/articles/14116402-rapid-plan-25k-a-comprehensive-look",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "winning_day_min_profit": {
+        "value": null,
+        "unit": "usd",
+        "source_url": "https://help.myfundedfutures.com/en/articles/14116402-rapid-plan-25k-a-comprehensive-look",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "consistency_max_day_pct": {
+        "value": null,
+        "unit": "percent",
+        "source_url": "https://help.myfundedfutures.com/en/articles/14116402-rapid-plan-25k-a-comprehensive-look",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "profit_basis": {
+        "value": "since_funded",
+        "unit": "choice",
+        "source_url": "https://help.myfundedfutures.com/en/articles/13286582-rapid-plan-150k-a-comprehensive-look",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "min_profit": {
+        "value": 5100,
+        "unit": "usd",
+        "source_url": "https://help.myfundedfutures.com/en/articles/13286582-rapid-plan-150k-a-comprehensive-look",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "buffer": {
+        "value": 4600,
+        "unit": "usd",
+        "source_url": "https://help.myfundedfutures.com/en/articles/13286582-rapid-plan-150k-a-comprehensive-look",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "max_payout": {
+        "value": null,
+        "unit": "usd",
+        "source_url": "https://help.myfundedfutures.com/en/articles/13286582-rapid-plan-150k-a-comprehensive-look",
+        "verified": "2026-10-16",
+        "status": "not_stated"
+      },
+      "max_payout_pct_of_profit": {
+        "value": null,
+        "unit": "percent",
+        "source_url": "https://help.myfundedfutures.com/en/articles/14116402-rapid-plan-25k-a-comprehensive-look",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "max_payout_pct_of_balance": {
+        "value": null,
+        "unit": "percent",
+        "source_url": "https://help.myfundedfutures.com/en/articles/14116402-rapid-plan-25k-a-comprehensive-look",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "max_payout_multiple_of_recent_profit": {
+        "value": null,
+        "unit": "multiple",
+        "source_url": "https://help.myfundedfutures.com/en/articles/14116402-rapid-plan-25k-a-comprehensive-look",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "profit_split_pct": {
+        "value": 90,
+        "unit": "percent",
+        "source_url": "https://help.myfundedfutures.com/en/articles/13286582-rapid-plan-150k-a-comprehensive-look",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "lifetime_max_payouts": {
+        "value": null,
+        "unit": "count",
+        "source_url": "https://help.myfundedfutures.com/en/articles/13134718-understanding-rapid-live",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "lifetime_max_payout_usd": {
+        "value": null,
+        "unit": "usd",
+        "source_url": "https://help.myfundedfutures.com/en/articles/13134718-understanding-rapid-live",
+        "verified": "2026-10-16",
+        "status": "verified"
+      }
+    }
+  },
+  "prices": {
+    "evaluation_fee": {
+      "value": 278,
+      "unit": "usd",
+      "source_url": "https://myfundedfutures.com/plans/rapid",
+      "verified": "2026-10-16",
+      "status": "verified"
+    },
+    "recurring_fee": {
+      "value": null,
+      "unit": "usd",
+      "source_url": "https://myfundedfutures.com/plans/rapid",
+      "verified": "2026-10-17",
+      "status": "verified"
+    },
+    "recurring_fee_every_days": {
+      "value": null,
+      "unit": "calendar_days",
+      "source_url": "https://myfundedfutures.com/plans/rapid",
+      "verified": "2026-10-17",
+      "status": "verified"
+    },
+    "reset_fee": {
+      "value": null,
+      "unit": "usd",
+      "source_url": "https://myfundedfutures.com/plans/rapid",
+      "verified": "2026-10-17",
+      "status": "verified"
+    },
+    "activation_fee": {
+      "value": 0,
+      "unit": "usd",
+      "source_url": "https://myfundedfutures.com/plans/rapid",
+      "verified": "2026-10-16",
+      "status": "verified"
+    }
+  },
+  "simulation_notes": [
+    "the live transition (risk review / $10k days) is out of scope"
+  ],
+  "generated": {
+    "engine_id": "mffu-rapid-150k",
+    "engine_sha256": "a920af9206fb42eaa83128732f24d7f5ef67d43705823f894cd9e52e709c5183",
+    "values_sha256": "f25fea3434a88c91b13793e9764ccbbd933893e7af810eb36f7af3ebe1433cfe"
+  }
+}

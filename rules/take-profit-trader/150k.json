@@ -1,0 +1,349 @@
+{
+  "$schema": "../../schema.json",
+  "id": "take-profit-trader/150k",
+  "firm": {
+    "slug": "take-profit-trader",
+    "name": "Take Profit Trader"
+  },
+  "plan": {
+    "slug": "150k",
+    "name": "150K Test",
+    "status": "active",
+    "source_url": "https://takeprofittraderhelp.zendesk.com/hc/en-us/articles/15169070804125-Rule-1-Hit-Your-Profit-Target"
+  },
+  "rules_verified": "2026-10-16",
+  "prices_verified": "2026-10-16",
+  "rules": {
+    "account": {
+      "size": {
+        "value": 150000,
+        "unit": "usd",
+        "source_url": "https://takeprofittraderhelp.zendesk.com/hc/en-us/articles/15169070804125-Rule-1-Hit-Your-Profit-Target",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "instant_funding": {
+        "value": false,
+        "unit": "flag",
+        "source_url": "https://takeprofittraderhelp.zendesk.com/hc/en-us/articles/15169070804125-Rule-1-Hit-Your-Profit-Target",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "trading_day_start": {
+        "value": "18:00",
+        "unit": "clock_new_york",
+        "source_url": "https://takeprofittraderhelp.zendesk.com/hc/en-us/articles/15170347090461-Rule-4-Trade-Approved-Products-During-Approved-Hours",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "trading_hours": {
+        "value": {
+          "start": "18:00",
+          "end": "17:00"
+        },
+        "unit": "time_window",
+        "source_url": "https://takeprofittraderhelp.zendesk.com/hc/en-us/articles/15170347090461-Rule-4-Trade-Approved-Products-During-Approved-Hours",
+        "verified": "2026-10-16",
+        "status": "verified"
+      }
+    },
+    "evaluation": {
+      "profit_target": {
+        "value": 9000,
+        "unit": "usd",
+        "source_url": "https://takeprofittraderhelp.zendesk.com/hc/en-us/articles/15169070804125-Rule-1-Hit-Your-Profit-Target",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "max_drawdown": {
+        "value": 4500,
+        "unit": "usd",
+        "source_url": "https://takeprofittraderhelp.zendesk.com/hc/en-us/articles/15170265979165-Rule-3-Do-Not-Hit-End-Of-Day-EOD-Maximum-Trailing-Drawdown",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "drawdown_type": {
+        "value": "end_of_day",
+        "unit": "choice",
+        "source_url": "https://takeprofittraderhelp.zendesk.com/hc/en-us/articles/15170265979165-Rule-3-Do-Not-Hit-End-Of-Day-EOD-Maximum-Trailing-Drawdown",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "drawdown_stops_at": {
+        "value": "starting_balance",
+        "unit": "choice",
+        "source_url": "https://takeprofittraderhelp.zendesk.com/hc/en-us/articles/15170265979165-Rule-3-Do-Not-Hit-End-Of-Day-EOD-Maximum-Trailing-Drawdown",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "daily_loss_limit": {
+        "value": null,
+        "unit": "usd",
+        "source_url": "https://takeprofittrader.com/",
+        "verified": "2026-10-21",
+        "status": "verified"
+      },
+      "consistency_max_day_pct": {
+        "value": 50,
+        "unit": "percent",
+        "source_url": "https://takeprofittraderhelp.zendesk.com/hc/en-us/articles/15170316538013-Rule-5-Be-Consistent",
+        "verified": "2026-10-17",
+        "status": "verified"
+      },
+      "min_trading_days": {
+        "value": 3,
+        "unit": "trading_days",
+        "source_url": "https://takeprofittraderhelp.zendesk.com/hc/en-us/articles/15170316538013-Rule-5-Be-Consistent",
+        "verified": "2026-10-17",
+        "status": "verified"
+      },
+      "time_limit_days": {
+        "value": null,
+        "unit": "calendar_days",
+        "source_url": "https://takeprofittraderhelp.zendesk.com/hc/en-us/articles/15141145057053-Test-Subscriptions",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "max_contracts": {
+        "value": 15,
+        "unit": "contracts",
+        "source_url": "https://takeprofittraderhelp.zendesk.com/hc/en-us/articles/15169066911133-Rule-2-Do-Not-Exceed-Maximum-Position-Size",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "contract_growth": {
+        "value": null,
+        "unit": "contract_growth",
+        "source_url": "https://takeprofittraderhelp.zendesk.com/hc/en-us/articles/15169066911133-Rule-2-Do-Not-Exceed-Maximum-Position-Size",
+        "verified": "2026-10-16",
+        "status": "verified"
+      }
+    },
+    "funded": {
+      "starting_balance": {
+        "value": 150000,
+        "unit": "usd",
+        "source_url": "https://takeprofittraderhelp.zendesk.com/hc/en-us/articles/15169070804125-Rule-1-Hit-Your-Profit-Target",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "max_drawdown": {
+        "value": 4500,
+        "unit": "usd",
+        "source_url": "https://takeprofittraderhelp.zendesk.com/hc/en-us/articles/15170265979165-Rule-3-Do-Not-Hit-End-Of-Day-EOD-Maximum-Trailing-Drawdown",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "drawdown_type": {
+        "value": "intraday",
+        "unit": "choice",
+        "source_url": "https://takeprofittraderhelp.zendesk.com/hc/en-us/articles/15171769361053-PRO-Account-Rules",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "drawdown_stops_above_start": {
+        "value": 0,
+        "unit": "usd",
+        "source_url": "https://takeprofittraderhelp.zendesk.com/hc/en-us/articles/15171769361053-PRO-Account-Rules",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "drawdown_after_payout": {
+        "value": null,
+        "unit": "payout_lock",
+        "source_url": "https://takeprofittraderhelp.zendesk.com/hc/en-us/articles/15171769361053-PRO-Account-Rules",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "daily_loss_limit": {
+        "value": null,
+        "unit": "usd",
+        "source_url": "https://takeprofittrader.com/",
+        "verified": "2026-10-21",
+        "status": "verified"
+      },
+      "max_contracts": {
+        "value": 15,
+        "unit": "contracts",
+        "source_url": "https://takeprofittraderhelp.zendesk.com/hc/en-us/articles/15169066911133-Rule-2-Do-Not-Exceed-Maximum-Position-Size",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "contract_scaling": {
+        "value": null,
+        "unit": "contract_scaling",
+        "source_url": "https://takeprofittraderhelp.zendesk.com/hc/en-us/articles/15169066911133-Rule-2-Do-Not-Exceed-Maximum-Position-Size",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "contract_growth": {
+        "value": null,
+        "unit": "contract_growth",
+        "source_url": "https://takeprofittraderhelp.zendesk.com/hc/en-us/articles/15169066911133-Rule-2-Do-Not-Exceed-Maximum-Position-Size",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "reduced_size_until_buffer": {
+        "value": null,
+        "unit": "reduced_size",
+        "source_url": "https://takeprofittraderhelp.zendesk.com/hc/en-us/articles/15169066911133-Rule-2-Do-Not-Exceed-Maximum-Position-Size",
+        "verified": "2026-10-16",
+        "status": "verified"
+      }
+    },
+    "payouts": {
+      "min_trading_days": {
+        "value": null,
+        "unit": "trading_days",
+        "source_url": "https://takeprofittraderhelp.zendesk.com/hc/en-us/articles/29660646764445-NOFEE40-PROMO-FAQS",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "min_calendar_days_between": {
+        "value": null,
+        "unit": "calendar_days",
+        "source_url": "https://takeprofittraderhelp.zendesk.com/hc/en-us/articles/29660646764445-NOFEE40-PROMO-FAQS",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "min_winning_days": {
+        "value": null,
+        "unit": "trading_days",
+        "source_url": "https://takeprofittraderhelp.zendesk.com/hc/en-us/articles/29660646764445-NOFEE40-PROMO-FAQS",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "winning_day_min_profit": {
+        "value": null,
+        "unit": "usd",
+        "source_url": "https://takeprofittraderhelp.zendesk.com/hc/en-us/articles/29660646764445-NOFEE40-PROMO-FAQS",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "consistency_max_day_pct": {
+        "value": null,
+        "unit": "percent",
+        "source_url": "https://takeprofittraderhelp.zendesk.com/hc/en-us/articles/29660646764445-NOFEE40-PROMO-FAQS",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "profit_basis": {
+        "value": "since_funded",
+        "unit": "choice",
+        "source_url": "https://takeprofittraderhelp.zendesk.com/hc/en-us/articles/15172219527581-PRO-Account-Profit-Split-Withdrawal-Rules",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "min_profit": {
+        "value": 4750,
+        "unit": "usd",
+        "source_url": "https://takeprofittraderhelp.zendesk.com/hc/en-us/articles/15172219527581-PRO-Account-Profit-Split-Withdrawal-Rules",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "buffer": {
+        "value": 4500,
+        "unit": "usd",
+        "source_url": "https://takeprofittraderhelp.zendesk.com/hc/en-us/articles/15172219527581-PRO-Account-Profit-Split-Withdrawal-Rules",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "max_payout": {
+        "value": null,
+        "unit": "usd",
+        "source_url": "https://takeprofittrader.com/",
+        "verified": "2026-10-21",
+        "status": "verified"
+      },
+      "max_payout_pct_of_profit": {
+        "value": null,
+        "unit": "percent",
+        "source_url": "https://takeprofittraderhelp.zendesk.com/hc/en-us/articles/29660646764445-NOFEE40-PROMO-FAQS",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "max_payout_pct_of_balance": {
+        "value": null,
+        "unit": "percent",
+        "source_url": "https://takeprofittraderhelp.zendesk.com/hc/en-us/articles/29660646764445-NOFEE40-PROMO-FAQS",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "max_payout_multiple_of_recent_profit": {
+        "value": null,
+        "unit": "multiple",
+        "source_url": "https://takeprofittraderhelp.zendesk.com/hc/en-us/articles/29660646764445-NOFEE40-PROMO-FAQS",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "profit_split_pct": {
+        "value": 80,
+        "unit": "percent",
+        "source_url": "https://takeprofittraderhelp.zendesk.com/hc/en-us/articles/15172219527581-PRO-Account-Profit-Split-Withdrawal-Rules",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "lifetime_max_payouts": {
+        "value": null,
+        "unit": "count",
+        "source_url": "https://takeprofittrader.com/",
+        "verified": "2026-10-21",
+        "status": "verified"
+      },
+      "lifetime_max_payout_usd": {
+        "value": null,
+        "unit": "usd",
+        "source_url": "https://takeprofittrader.com/",
+        "verified": "2026-10-21",
+        "status": "verified"
+      }
+    }
+  },
+  "prices": {
+    "evaluation_fee": {
+      "value": 216,
+      "unit": "usd",
+      "source_url": "https://takeprofittrader.com/",
+      "verified": "2026-10-21",
+      "status": "verified"
+    },
+    "recurring_fee": {
+      "value": 216,
+      "unit": "usd",
+      "source_url": "https://takeprofittraderhelp.zendesk.com/hc/en-us/articles/15141145057053-Test-Subscriptions",
+      "verified": "2026-10-16",
+      "status": "verified"
+    },
+    "recurring_fee_every_days": {
+      "value": 30,
+      "unit": "calendar_days",
+      "source_url": "https://takeprofittraderhelp.zendesk.com/hc/en-us/articles/15141145057053-Test-Subscriptions",
+      "verified": "2026-10-16",
+      "status": "verified"
+    },
+    "reset_fee": {
+      "value": 199,
+      "unit": "usd",
+      "source_url": "https://takeprofittraderhelp.zendesk.com/hc/en-us/articles/15140989806493-Resetting-Your-Test-Account",
+      "verified": "2026-10-16",
+      "status": "verified"
+    },
+    "activation_fee": {
+      "value": 130,
+      "unit": "usd",
+      "source_url": "https://takeprofittrader.com/",
+      "verified": "2026-10-21",
+      "status": "verified"
+    }
+  },
+  "simulation_notes": [
+    "the PRO has no minimum withdrawal above the buffer; the sim waits for $250 above it, standing in for the $50 fee on wallet withdrawals of $250 or less, which it does not charge",
+    "consistency is strictly-below-50% in reality; the sim caps at ≤50% (≤$0.01 difference)",
+    "PRO+ (live) is out of scope"
+  ],
+  "generated": {
+    "engine_id": "tpt-150k",
+    "engine_sha256": "90112b1baee19b0607953bc84b26da9173eaec7be96cb4216f6fd3dd31564185",
+    "values_sha256": "c4b47c2428bc319159d5158a20f637e89044b6ad22f1fb5a22b21d2e19ae497d"
+  }
+}

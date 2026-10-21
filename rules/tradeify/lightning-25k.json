@@ -1,0 +1,289 @@
+{
+  "$schema": "../../schema.json",
+  "id": "tradeify/lightning-25k",
+  "firm": {
+    "slug": "tradeify",
+    "name": "Tradeify"
+  },
+  "plan": {
+    "slug": "lightning-25k",
+    "name": "Lightning 25K",
+    "status": "active",
+    "source_url": "https://tradeify.co/"
+  },
+  "rules_verified": "2026-10-16",
+  "prices_verified": "2026-10-16",
+  "rules": {
+    "account": {
+      "size": {
+        "value": 25000,
+        "unit": "usd",
+        "source_url": "https://tradeify.co/",
+        "verified": "2026-10-17",
+        "status": "verified"
+      },
+      "instant_funding": {
+        "value": true,
+        "unit": "flag",
+        "source_url": "https://tradeify.co/",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "trading_day_start": {
+        "value": "18:00",
+        "unit": "clock_new_york",
+        "source_url": "https://help.tradeify.co/en/articles/10495876-rules-permitted-times-to-trade",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "trading_hours": {
+        "value": {
+          "start": "18:00",
+          "end": "16:45"
+        },
+        "unit": "time_window",
+        "source_url": "https://help.tradeify.co/en/articles/12268494-common-faqs",
+        "verified": "2026-10-16",
+        "status": "verified"
+      }
+    },
+    "evaluation": null,
+    "funded": {
+      "starting_balance": {
+        "value": 25000,
+        "unit": "usd",
+        "source_url": "https://tradeify.co/",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "max_drawdown": {
+        "value": 1000,
+        "unit": "usd",
+        "source_url": "https://tradeify.co/",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "drawdown_type": {
+        "value": "end_of_day",
+        "unit": "choice",
+        "source_url": "https://tradeify.co/",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "drawdown_stops_above_start": {
+        "value": 100,
+        "unit": "usd",
+        "source_url": "https://tradeify.co/post/prop-firm-payout-rules-every-funded-trader-should-know",
+        "verified": "2026-10-21",
+        "status": "verified"
+      },
+      "drawdown_after_payout": {
+        "value": {
+          "after": "first_payout",
+          "floor_above_start": 100
+        },
+        "unit": "payout_lock",
+        "source_url": "https://help.tradeify.co/en/articles/10495897-rules-trailing-max-drawdowns",
+        "verified": "2026-10-18",
+        "status": "verified"
+      },
+      "daily_loss_limit": {
+        "value": null,
+        "unit": "usd",
+        "source_url": "https://tradeify.co/",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "max_contracts": {
+        "value": 1,
+        "unit": "contracts",
+        "source_url": "https://tradeify.co/",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "contract_scaling": {
+        "value": null,
+        "unit": "contract_scaling",
+        "source_url": "https://tradeify.co/",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "contract_growth": {
+        "value": null,
+        "unit": "contract_growth",
+        "source_url": "https://tradeify.co/",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "reduced_size_until_buffer": {
+        "value": null,
+        "unit": "reduced_size",
+        "source_url": "https://tradeify.co/",
+        "verified": "2026-10-16",
+        "status": "verified"
+      }
+    },
+    "payouts": {
+      "min_trading_days": {
+        "value": null,
+        "unit": "trading_days",
+        "source_url": "https://help.tradeify.co/en/articles/10495932-lightning-funded-account-payout-policy",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "min_calendar_days_between": {
+        "value": null,
+        "unit": "calendar_days",
+        "source_url": "https://help.tradeify.co/en/articles/12268167-essential-trading-rules-overview",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "min_winning_days": {
+        "value": null,
+        "unit": "trading_days",
+        "source_url": "https://help.tradeify.co/en/articles/10495932-lightning-funded-account-payout-policy",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "winning_day_min_profit": {
+        "value": null,
+        "unit": "usd",
+        "source_url": "https://help.tradeify.co/en/articles/10495932-lightning-funded-account-payout-policy",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "consistency_max_day_pct": {
+        "value": [
+          20,
+          25,
+          30
+        ],
+        "unit": "percent",
+        "source_url": "https://tradeify.co/",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "profit_basis": {
+        "value": [
+          "since_funded",
+          "since_last_payout"
+        ],
+        "unit": "choice",
+        "source_url": "https://help.tradeify.co/en/articles/10495932-lightning-funded-account-payout-policy",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "min_profit": {
+        "value": [
+          1500,
+          1000
+        ],
+        "unit": "usd",
+        "source_url": "https://help.tradeify.co/en/articles/10495932-lightning-funded-account-payout-policy",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "buffer": {
+        "value": 0,
+        "unit": "usd",
+        "source_url": "https://help.tradeify.co/en/articles/10495932-lightning-funded-account-payout-policy",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "max_payout": {
+        "value": 1000,
+        "unit": "usd",
+        "source_url": "https://help.tradeify.co/en/articles/10495932-lightning-funded-account-payout-policy",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "max_payout_pct_of_profit": {
+        "value": null,
+        "unit": "percent",
+        "source_url": "https://help.tradeify.co/en/articles/10495932-lightning-funded-account-payout-policy",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "max_payout_pct_of_balance": {
+        "value": null,
+        "unit": "percent",
+        "source_url": "https://help.tradeify.co/en/articles/10495932-lightning-funded-account-payout-policy",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "max_payout_multiple_of_recent_profit": {
+        "value": null,
+        "unit": "multiple",
+        "source_url": "https://help.tradeify.co/en/articles/10495932-lightning-funded-account-payout-policy",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "profit_split_pct": {
+        "value": 90,
+        "unit": "percent",
+        "source_url": "https://tradeify.co/post/prop-firm-payout-rules-every-funded-trader-should-know",
+        "verified": "2026-10-21",
+        "status": "verified"
+      },
+      "lifetime_max_payouts": {
+        "value": null,
+        "unit": "count",
+        "source_url": "https://help.tradeify.co/en/articles/12969284-tradeify-elite-program",
+        "verified": "2026-10-16",
+        "status": "verified"
+      },
+      "lifetime_max_payout_usd": {
+        "value": null,
+        "unit": "usd",
+        "source_url": "https://help.tradeify.co/en/articles/12969284-tradeify-elite-program",
+        "verified": "2026-10-18",
+        "status": "verified"
+      }
+    }
+  },
+  "prices": {
+    "evaluation_fee": {
+      "value": 345,
+      "unit": "usd",
+      "source_url": "https://tradeify.co/",
+      "verified": "2026-10-16",
+      "status": "verified"
+    },
+    "recurring_fee": {
+      "value": null,
+      "unit": "usd",
+      "source_url": "https://tradeify.co/",
+      "verified": "2026-10-17",
+      "status": "verified"
+    },
+    "recurring_fee_every_days": {
+      "value": null,
+      "unit": "calendar_days",
+      "source_url": "https://tradeify.co/",
+      "verified": "2026-10-16",
+      "status": "verified"
+    },
+    "reset_fee": {
+      "value": null,
+      "unit": "usd",
+      "source_url": "https://help.tradeify.co/en/articles/14369021-tradeify-pricing-reference",
+      "verified": "2026-10-16",
+      "status": "verified"
+    },
+    "activation_fee": {
+      "value": 0,
+      "unit": "usd",
+      "source_url": "https://help.tradeify.co/en/articles/14369021-tradeify-pricing-reference",
+      "verified": "2026-10-16",
+      "status": "verified"
+    }
+  },
+  "simulation_notes": [
+    "selection for Elite Live (at Tradeify's discretion, after 3 payouts on one account or 10 in total) is out of scope; the sim keeps the funded account trading, with no profit cap"
+  ],
+  "generated": {
+    "engine_id": "tradeify-lightning-25k",
+    "engine_sha256": "8120c9a5785e5fd27265b6c3e103a9fff86298bcbbf8e9772d106290da12d569",
+    "values_sha256": "74863a0af629d23363ce2996d719ec2af6a7fc75d17d4ec4e2095b6500627b27"
+  }
+}

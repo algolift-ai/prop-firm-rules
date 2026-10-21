@@ -1,0 +1,344 @@
+{
+  "$schema": "../../schema.json",
+  "id": "tradeday/qp-intraday-100k",
+  "firm": {
+    "slug": "tradeday",
+    "name": "TradeDay"
+  },
+  "plan": {
+    "slug": "qp-intraday-100k",
+    "name": "QP Intraday 100K",
+    "status": "active",
+    "source_url": "https://www.tradeday.com/"
+  },
+  "rules_verified": "2026-10-21",
+  "prices_verified": "2026-10-21",
+  "rules": {
+    "account": {
+      "size": {
+        "value": 100000,
+        "unit": "usd",
+        "source_url": "https://www.tradeday.com/",
+        "verified": "2026-10-21",
+        "status": "verified"
+      },
+      "instant_funding": {
+        "value": false,
+        "unit": "flag",
+        "source_url": "https://www.tradeday.com/",
+        "verified": "2026-10-21",
+        "status": "verified"
+      },
+      "trading_day_start": {
+        "value": "18:00",
+        "unit": "clock_new_york",
+        "source_url": "https://tradeday.freshdesk.com/en/support/solutions/articles/103000008864-what-is-the-definition-of-a-trading-day-",
+        "verified": "2026-10-21",
+        "status": "verified"
+      },
+      "trading_hours": {
+        "value": null,
+        "unit": "time_window",
+        "source_url": "https://tradeday.freshdesk.com/en/support/solutions/articles/103000018874-what-is-the-permitted-trading-times-guideline-",
+        "verified": "2026-10-21",
+        "status": "verified"
+      }
+    },
+    "evaluation": {
+      "profit_target": {
+        "value": 6000,
+        "unit": "usd",
+        "source_url": "https://www.tradeday.com/",
+        "verified": "2026-10-21",
+        "status": "verified"
+      },
+      "max_drawdown": {
+        "value": 3000,
+        "unit": "usd",
+        "source_url": "https://www.tradeday.com/",
+        "verified": "2026-10-21",
+        "status": "verified"
+      },
+      "drawdown_type": {
+        "value": "intraday",
+        "unit": "choice",
+        "source_url": "https://www.tradeday.com/",
+        "verified": "2026-10-21",
+        "status": "verified"
+      },
+      "drawdown_stops_at": {
+        "value": "starting_balance",
+        "unit": "choice",
+        "source_url": "https://tradeday.freshdesk.com/en/support/solutions/articles/103000008855-what-is-the-maximum-drawdown-rule-",
+        "verified": "2026-10-21",
+        "status": "verified"
+      },
+      "daily_loss_limit": {
+        "value": null,
+        "unit": "usd",
+        "source_url": "https://www.tradeday.com/",
+        "verified": "2026-10-21",
+        "status": "verified"
+      },
+      "consistency_max_day_pct": {
+        "value": 30,
+        "unit": "percent",
+        "source_url": "https://tradeday.freshdesk.com/en/support/solutions/articles/103000008847-what-are-the-objectives-and-rules-of-the-quick-pay-and-fast-pass-evaluation-",
+        "verified": "2026-10-21",
+        "status": "verified"
+      },
+      "min_trading_days": {
+        "value": 5,
+        "unit": "trading_days",
+        "source_url": "https://tradeday.freshdesk.com/en/support/solutions/articles/103000008850",
+        "verified": "2026-10-21",
+        "status": "verified"
+      },
+      "time_limit_days": {
+        "value": null,
+        "unit": "calendar_days",
+        "source_url": "https://tradeday.freshdesk.com/en/support/solutions/articles/103000008850",
+        "verified": "2026-10-21",
+        "status": "verified"
+      },
+      "max_contracts": {
+        "value": 10,
+        "unit": "contracts",
+        "source_url": "https://www.tradeday.com/",
+        "verified": "2026-10-21",
+        "status": "verified"
+      },
+      "contract_growth": {
+        "value": null,
+        "unit": "contract_growth",
+        "source_url": "https://www.tradeday.com/",
+        "verified": "2026-10-21",
+        "status": "verified"
+      }
+    },
+    "funded": {
+      "starting_balance": {
+        "value": 100000,
+        "unit": "usd",
+        "source_url": "https://www.tradeday.com/",
+        "verified": "2026-10-21",
+        "status": "verified"
+      },
+      "max_drawdown": {
+        "value": 3000,
+        "unit": "usd",
+        "source_url": "https://www.tradeday.com/",
+        "verified": "2026-10-21",
+        "status": "verified"
+      },
+      "drawdown_type": {
+        "value": "intraday",
+        "unit": "choice",
+        "source_url": "https://tradeday.freshdesk.com/en/support/solutions/articles/103000008889-what-are-the-rules-for-funded-funded-sim-and-funded-live-traders-",
+        "verified": "2026-10-21",
+        "status": "verified"
+      },
+      "drawdown_stops_above_start": {
+        "value": 0,
+        "unit": "usd",
+        "source_url": "https://tradeday.freshdesk.com/en/support/solutions/articles/103000250682-funded-accounts-withdrawals-and-the-impact-of-drawdowns",
+        "verified": "2026-10-21",
+        "status": "verified"
+      },
+      "drawdown_after_payout": {
+        "value": null,
+        "unit": "payout_lock",
+        "source_url": "https://tradeday.freshdesk.com/en/support/solutions/articles/103000335937-quick-pay-funded-sim-payout-policy",
+        "verified": "2026-10-21",
+        "status": "verified"
+      },
+      "daily_loss_limit": {
+        "value": null,
+        "unit": "usd",
+        "source_url": "https://tradeday.freshdesk.com/en/support/solutions/articles/103000008889-what-are-the-rules-for-funded-funded-sim-and-funded-live-traders-",
+        "verified": "2026-10-21",
+        "status": "verified"
+      },
+      "max_contracts": {
+        "value": 10,
+        "unit": "contracts",
+        "source_url": "https://www.tradeday.com/",
+        "verified": "2026-10-21",
+        "status": "verified"
+      },
+      "contract_scaling": {
+        "value": null,
+        "unit": "contract_scaling",
+        "source_url": "https://www.tradeday.com/",
+        "verified": "2026-10-21",
+        "status": "verified"
+      },
+      "contract_growth": {
+        "value": null,
+        "unit": "contract_growth",
+        "source_url": "https://www.tradeday.com/",
+        "verified": "2026-10-21",
+        "status": "verified"
+      },
+      "reduced_size_until_buffer": {
+        "value": null,
+        "unit": "reduced_size",
+        "source_url": "https://www.tradeday.com/",
+        "verified": "2026-10-21",
+        "status": "verified"
+      }
+    },
+    "payouts": {
+      "min_trading_days": {
+        "value": 1,
+        "unit": "trading_days",
+        "source_url": "https://www.tradeday.com/",
+        "verified": "2026-10-21",
+        "status": "verified"
+      },
+      "min_calendar_days_between": {
+        "value": null,
+        "unit": "calendar_days",
+        "source_url": "https://tradeday.freshdesk.com/en/support/solutions/articles/103000404096-fast-pass-funded-sim-payout-policy",
+        "verified": "2026-10-21",
+        "status": "verified"
+      },
+      "min_winning_days": {
+        "value": null,
+        "unit": "trading_days",
+        "source_url": "https://tradeday.freshdesk.com/en/support/solutions/articles/103000405228-what-is-quick-pay-",
+        "verified": "2026-10-21",
+        "status": "verified"
+      },
+      "winning_day_min_profit": {
+        "value": null,
+        "unit": "usd",
+        "source_url": "https://tradeday.freshdesk.com/en/support/solutions/articles/103000405228-what-is-quick-pay-",
+        "verified": "2026-10-21",
+        "status": "verified"
+      },
+      "consistency_max_day_pct": {
+        "value": null,
+        "unit": "percent",
+        "source_url": "https://tradeday.freshdesk.com/en/support/solutions/articles/103000405228-what-is-quick-pay-",
+        "verified": "2026-10-21",
+        "status": "verified"
+      },
+      "profit_basis": {
+        "value": "since_funded",
+        "unit": "choice",
+        "source_url": "https://tradeday.freshdesk.com/en/support/solutions/articles/103000335937-quick-pay-funded-sim-payout-policy",
+        "verified": "2026-10-21",
+        "status": "verified"
+      },
+      "min_profit": {
+        "value": null,
+        "unit": "usd",
+        "source_url": "https://tradeday.freshdesk.com/en/support/solutions/articles/103000335937-quick-pay-funded-sim-payout-policy",
+        "verified": "2026-10-21",
+        "status": "verified"
+      },
+      "buffer": {
+        "value": 0,
+        "unit": "usd",
+        "source_url": "https://tradeday.freshdesk.com/en/support/solutions/articles/103000404096-fast-pass-funded-sim-payout-policy",
+        "verified": "2026-10-21",
+        "status": "verified"
+      },
+      "max_payout": {
+        "value": null,
+        "unit": "usd",
+        "source_url": "https://tradeday.freshdesk.com/en/support/solutions/articles/103000405228-what-is-quick-pay-",
+        "verified": "2026-10-21",
+        "status": "verified"
+      },
+      "max_payout_pct_of_profit": {
+        "value": null,
+        "unit": "percent",
+        "source_url": "https://tradeday.freshdesk.com/en/support/solutions/articles/103000405228-what-is-quick-pay-",
+        "verified": "2026-10-21",
+        "status": "verified"
+      },
+      "max_payout_pct_of_balance": {
+        "value": null,
+        "unit": "percent",
+        "source_url": "https://tradeday.freshdesk.com/en/support/solutions/articles/103000405228-what-is-quick-pay-",
+        "verified": "2026-10-21",
+        "status": "verified"
+      },
+      "max_payout_multiple_of_recent_profit": {
+        "value": null,
+        "unit": "multiple",
+        "source_url": "https://tradeday.freshdesk.com/en/support/solutions/articles/103000404096-fast-pass-funded-sim-payout-policy",
+        "verified": "2026-10-21",
+        "status": "verified"
+      },
+      "profit_split_pct": {
+        "value": 50,
+        "unit": "percent",
+        "source_url": "https://tradeday.freshdesk.com/en/support/solutions/articles/103000335937-quick-pay-funded-sim-payout-policy",
+        "verified": "2026-10-21",
+        "status": "verified"
+      },
+      "lifetime_max_payouts": {
+        "value": null,
+        "unit": "count",
+        "source_url": "https://tradeday.freshdesk.com/en/support/solutions/articles/103000405228-what-is-quick-pay-",
+        "verified": "2026-10-21",
+        "status": "verified"
+      },
+      "lifetime_max_payout_usd": {
+        "value": null,
+        "unit": "usd",
+        "source_url": "https://tradeday.freshdesk.com/en/support/solutions/articles/103000404096-fast-pass-funded-sim-payout-policy",
+        "verified": "2026-10-21",
+        "status": "verified"
+      }
+    }
+  },
+  "prices": {
+    "evaluation_fee": {
+      "value": 108,
+      "unit": "usd",
+      "source_url": "https://www.tradeday.com/",
+      "verified": "2026-10-21",
+      "status": "verified"
+    },
+    "recurring_fee": {
+      "value": 108,
+      "unit": "usd",
+      "source_url": "https://www.tradeday.com/",
+      "verified": "2026-10-21",
+      "status": "verified"
+    },
+    "recurring_fee_every_days": {
+      "value": 30,
+      "unit": "calendar_days",
+      "source_url": "https://www.tradeday.com/",
+      "verified": "2026-10-21",
+      "status": "verified"
+    },
+    "reset_fee": {
+      "value": 108,
+      "unit": "usd",
+      "source_url": "https://www.tradeday.com/",
+      "verified": "2026-10-21",
+      "status": "verified"
+    },
+    "activation_fee": {
+      "value": 0,
+      "unit": "usd",
+      "source_url": "https://tradeday.freshdesk.com/en/support/solutions/articles/103000008894-are-there-any-fees-when-i-am-funded-",
+      "verified": "2026-10-21",
+      "status": "verified"
+    }
+  },
+  "simulation_notes": [
+    "the Funded Live stage (at $10k gross profit, 90/10) is out of scope"
+  ],
+  "generated": {
+    "engine_id": "tradeday-qp-intraday-100k",
+    "engine_sha256": "3bc04aea7e9aa19faa7bf2d63b60b10ad336239fdc31bf2d73aafaa84d73c02d",
+    "values_sha256": "d2e43a5967b20c9d8c4b5ec931106d7532faf33132d38ebf81a3eb4fbc36d29c"
+  }
+}

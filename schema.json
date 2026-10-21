@@ -1,0 +1,2171 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/algolift-ai/prop-firm-rules/blob/main/schema.json",
+  "title": "Prop firm plan rules",
+  "description": "One prop-firm plan (one account size of one program): its rules and its prices, each with the firm page it was checked against and the date it was checked. Rules and prices are dated separately: rules_verified and prices_verified. Values are the rules as AlgoLift's published prop rules registry records them, in the shape AlgoLift's simulator reads; simulation_notes says where the simulation approximates a rule.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "$schema",
+    "id",
+    "firm",
+    "plan",
+    "rules_verified",
+    "prices_verified",
+    "rules",
+    "prices",
+    "simulation_notes",
+    "generated"
+  ],
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "id": {
+      "description": "<firm slug>/<plan slug>, the file's path under rules/ without .json.",
+      "type": "string",
+      "pattern": "^[a-z0-9-]+/[a-z0-9-]+$"
+    },
+    "firm": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "slug",
+        "name"
+      ],
+      "properties": {
+        "slug": {
+          "$ref": "#/$defs/slug"
+        },
+        "name": {
+          "type": "string"
+        }
+      }
+    },
+    "plan": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "slug",
+        "name",
+        "status",
+        "source_url"
+      ],
+      "properties": {
+        "slug": {
+          "$ref": "#/$defs/slug"
+        },
+        "name": {
+          "type": "string"
+        },
+        "status": {
+          "description": "active: the firm sells this plan. discontinued: it no longer does (kept because AlgoLift still simulates it). unverified: not checked yet.",
+          "type": "string",
+          "enum": [
+            "active",
+            "discontinued",
+            "unverified"
+          ]
+        },
+        "source_url": {
+          "$ref": "#/$defs/source_url"
+        }
+      }
+    },
+    "rules_verified": {
+      "description": "The oldest verified date among the rules; null while any rule is unverified or differs from its source.",
+      "anyOf": [
+        {
+          "type": "string",
+          "format": "date"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "prices_verified": {
+      "description": "The oldest verified date among the prices; null while any price is unverified or differs from its source. Prices change more often than rules, so they carry their own date.",
+      "anyOf": [
+        {
+          "type": "string",
+          "format": "date"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "rules": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "account",
+        "evaluation",
+        "funded",
+        "payouts"
+      ],
+      "properties": {
+        "account": {
+          "description": "The account itself.",
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "size",
+            "instant_funding",
+            "trading_day_start",
+            "trading_hours"
+          ],
+          "properties": {
+            "size": {
+              "$ref": "#/$defs/account.size"
+            },
+            "instant_funding": {
+              "$ref": "#/$defs/account.instant_funding"
+            },
+            "trading_day_start": {
+              "$ref": "#/$defs/account.trading_day_start"
+            },
+            "trading_hours": {
+              "$ref": "#/$defs/account.trading_hours"
+            }
+          }
+        },
+        "evaluation": {
+          "anyOf": [
+            {
+              "description": "The evaluation (the challenge) a trader passes to be funded. null on an instant-funding plan.",
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "profit_target",
+                "max_drawdown",
+                "drawdown_type",
+                "drawdown_stops_at",
+                "daily_loss_limit",
+                "consistency_max_day_pct",
+                "min_trading_days",
+                "time_limit_days",
+                "max_contracts",
+                "contract_growth"
+              ],
+              "properties": {
+                "profit_target": {
+                  "$ref": "#/$defs/evaluation.profit_target"
+                },
+                "max_drawdown": {
+                  "$ref": "#/$defs/evaluation.max_drawdown"
+                },
+                "drawdown_type": {
+                  "$ref": "#/$defs/evaluation.drawdown_type"
+                },
+                "drawdown_stops_at": {
+                  "$ref": "#/$defs/evaluation.drawdown_stops_at"
+                },
+                "daily_loss_limit": {
+                  "$ref": "#/$defs/evaluation.daily_loss_limit"
+                },
+                "consistency_max_day_pct": {
+                  "$ref": "#/$defs/evaluation.consistency_max_day_pct"
+                },
+                "min_trading_days": {
+                  "$ref": "#/$defs/evaluation.min_trading_days"
+                },
+                "time_limit_days": {
+                  "$ref": "#/$defs/evaluation.time_limit_days"
+                },
+                "max_contracts": {
+                  "$ref": "#/$defs/evaluation.max_contracts"
+                },
+                "contract_growth": {
+                  "$ref": "#/$defs/evaluation.contract_growth"
+                }
+              }
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "funded": {
+          "description": "The funded account.",
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "starting_balance",
+            "max_drawdown",
+            "drawdown_type",
+            "drawdown_stops_above_start",
+            "drawdown_after_payout",
+            "daily_loss_limit",
+            "max_contracts",
+            "contract_scaling",
+            "contract_growth",
+            "reduced_size_until_buffer"
+          ],
+          "properties": {
+            "starting_balance": {
+              "$ref": "#/$defs/funded.starting_balance"
+            },
+            "max_drawdown": {
+              "$ref": "#/$defs/funded.max_drawdown"
+            },
+            "drawdown_type": {
+              "$ref": "#/$defs/funded.drawdown_type"
+            },
+            "drawdown_stops_above_start": {
+              "$ref": "#/$defs/funded.drawdown_stops_above_start"
+            },
+            "drawdown_after_payout": {
+              "$ref": "#/$defs/funded.drawdown_after_payout"
+            },
+            "daily_loss_limit": {
+              "$ref": "#/$defs/funded.daily_loss_limit"
+            },
+            "max_contracts": {
+              "$ref": "#/$defs/funded.max_contracts"
+            },
+            "contract_scaling": {
+              "$ref": "#/$defs/funded.contract_scaling"
+            },
+            "contract_growth": {
+              "$ref": "#/$defs/funded.contract_growth"
+            },
+            "reduced_size_until_buffer": {
+              "$ref": "#/$defs/funded.reduced_size_until_buffer"
+            }
+          }
+        },
+        "payouts": {
+          "description": "When and how much a funded trader can withdraw.",
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "min_trading_days",
+            "min_calendar_days_between",
+            "min_winning_days",
+            "winning_day_min_profit",
+            "consistency_max_day_pct",
+            "profit_basis",
+            "min_profit",
+            "buffer",
+            "max_payout",
+            "max_payout_pct_of_profit",
+            "max_payout_pct_of_balance",
+            "max_payout_multiple_of_recent_profit",
+            "profit_split_pct",
+            "lifetime_max_payouts",
+            "lifetime_max_payout_usd"
+          ],
+          "properties": {
+            "min_trading_days": {
+              "$ref": "#/$defs/payouts.min_trading_days"
+            },
+            "min_calendar_days_between": {
+              "$ref": "#/$defs/payouts.min_calendar_days_between"
+            },
+            "min_winning_days": {
+              "$ref": "#/$defs/payouts.min_winning_days"
+            },
+            "winning_day_min_profit": {
+              "$ref": "#/$defs/payouts.winning_day_min_profit"
+            },
+            "consistency_max_day_pct": {
+              "$ref": "#/$defs/payouts.consistency_max_day_pct"
+            },
+            "profit_basis": {
+              "$ref": "#/$defs/payouts.profit_basis"
+            },
+            "min_profit": {
+              "$ref": "#/$defs/payouts.min_profit"
+            },
+            "buffer": {
+              "$ref": "#/$defs/payouts.buffer"
+            },
+            "max_payout": {
+              "$ref": "#/$defs/payouts.max_payout"
+            },
+            "max_payout_pct_of_profit": {
+              "$ref": "#/$defs/payouts.max_payout_pct_of_profit"
+            },
+            "max_payout_pct_of_balance": {
+              "$ref": "#/$defs/payouts.max_payout_pct_of_balance"
+            },
+            "max_payout_multiple_of_recent_profit": {
+              "$ref": "#/$defs/payouts.max_payout_multiple_of_recent_profit"
+            },
+            "profit_split_pct": {
+              "$ref": "#/$defs/payouts.profit_split_pct"
+            },
+            "lifetime_max_payouts": {
+              "$ref": "#/$defs/payouts.lifetime_max_payouts"
+            },
+            "lifetime_max_payout_usd": {
+              "$ref": "#/$defs/payouts.lifetime_max_payout_usd"
+            }
+          }
+        }
+      }
+    },
+    "prices": {
+      "description": "What the plan costs, in US dollars.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "evaluation_fee",
+        "recurring_fee",
+        "recurring_fee_every_days",
+        "reset_fee",
+        "activation_fee"
+      ],
+      "properties": {
+        "evaluation_fee": {
+          "$ref": "#/$defs/prices.evaluation_fee"
+        },
+        "recurring_fee": {
+          "$ref": "#/$defs/prices.recurring_fee"
+        },
+        "recurring_fee_every_days": {
+          "$ref": "#/$defs/prices.recurring_fee_every_days"
+        },
+        "reset_fee": {
+          "$ref": "#/$defs/prices.reset_fee"
+        },
+        "activation_fee": {
+          "$ref": "#/$defs/prices.activation_fee"
+        }
+      }
+    },
+    "simulation_notes": {
+      "description": "Where AlgoLift's simulation of this plan approximates or leaves out a rule, in plain words.",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "generated": {
+      "description": "How this file was made: from AlgoLift's published prop rules registry snapshot, by AlgoLift's exporter, through the simulator's catalogue built from that snapshot (engine/catalog.json). The validator checks both hashes.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "engine_id",
+        "engine_sha256",
+        "values_sha256"
+      ],
+      "properties": {
+        "engine_id": {
+          "description": "The plan's id in engine/catalog.json.",
+          "type": "string"
+        },
+        "engine_sha256": {
+          "description": "sha256 of the plan's entry in engine/catalog.json, as canonical JSON.",
+          "$ref": "#/$defs/sha256"
+        },
+        "values_sha256": {
+          "description": "sha256 of this file's rule and price values, as canonical JSON.",
+          "$ref": "#/$defs/sha256"
+        }
+      }
+    }
+  },
+  "$defs": {
+    "date": {
+      "type": "string",
+      "format": "date"
+    },
+    "source_url": {
+      "description": "The firm's own page this rule was checked against. null means the rule has not been verified yet; the validator refuses a file with any null source.",
+      "anyOf": [
+        {
+          "type": "string",
+          "pattern": "^https://\\S+$"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "verified": {
+      "description": "The date (YYYY-MM-DD) the rule was last checked against source_url. null means never; the validator refuses a null date, and a date older than the re-check window.",
+      "anyOf": [
+        {
+          "type": "string",
+          "format": "date"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "status": {
+      "description": "verified: checked against source_url on the verified date, and the firm states this value. not_stated: the firm's pages checked on that date do not state this rule, so the value is AlgoLift's assumption (see simulation_notes). differs: the firm's page states something else; the value stays as AlgoLift simulates it until the simulator is updated, and the validator refuses the file. unverified: not checked yet; the validator refuses the file.",
+      "type": "string",
+      "enum": [
+        "verified",
+        "not_stated",
+        "differs",
+        "unverified"
+      ]
+    },
+    "slug": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+    },
+    "sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "account.size": {
+      "title": "Account size",
+      "description": "Account size. The account's nominal size: the balance the evaluation starts at. Unit: usd (US dollars.)",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "value",
+        "unit",
+        "source_url",
+        "verified",
+        "status"
+      ],
+      "properties": {
+        "value": {
+          "type": "number",
+          "minimum": 0
+        },
+        "unit": {
+          "const": "usd"
+        },
+        "source_url": {
+          "$ref": "#/$defs/source_url"
+        },
+        "verified": {
+          "$ref": "#/$defs/verified"
+        },
+        "status": {
+          "$ref": "#/$defs/status"
+        }
+      }
+    },
+    "account.instant_funding": {
+      "title": "Instant funding",
+      "description": "Instant funding. True when the plan has no evaluation: the fee buys a funded account directly. Unit: flag (True or false.)",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "value",
+        "unit",
+        "source_url",
+        "verified",
+        "status"
+      ],
+      "properties": {
+        "value": {
+          "type": "boolean"
+        },
+        "unit": {
+          "const": "flag"
+        },
+        "source_url": {
+          "$ref": "#/$defs/source_url"
+        },
+        "verified": {
+          "$ref": "#/$defs/verified"
+        },
+        "status": {
+          "$ref": "#/$defs/status"
+        }
+      }
+    },
+    "account.trading_day_start": {
+      "title": "Trading day starts",
+      "description": "Trading day starts. When the firm's trading day begins. A trade after this time counts toward the next trading day for every daily rule: daily loss, consistency, winning days and minimum days. Unit: clock_new_york (A time of day, HH:MM, New York time.)",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "value",
+        "unit",
+        "source_url",
+        "verified",
+        "status"
+      ],
+      "properties": {
+        "value": {
+          "type": "string",
+          "pattern": "^([01][0-9]|2[0-3]):[0-5][0-9]$"
+        },
+        "unit": {
+          "const": "clock_new_york"
+        },
+        "source_url": {
+          "$ref": "#/$defs/source_url"
+        },
+        "verified": {
+          "$ref": "#/$defs/verified"
+        },
+        "status": {
+          "$ref": "#/$defs/status"
+        }
+      }
+    },
+    "account.trading_hours": {
+      "title": "Trading hours",
+      "description": "Trading hours. The hours in which the account may hold positions and trade, New York time; null when it may trade whenever the exchange is open. Unit: time_window (An object { start, end }, each HH:MM New York time; an end before the start runs past midnight.)",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "value",
+        "unit",
+        "source_url",
+        "verified",
+        "status"
+      ],
+      "properties": {
+        "value": {
+          "anyOf": [
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "start",
+                "end"
+              ],
+              "properties": {
+                "start": {
+                  "type": "string",
+                  "pattern": "^([01][0-9]|2[0-3]):[0-5][0-9]$"
+                },
+                "end": {
+                  "type": "string",
+                  "pattern": "^([01][0-9]|2[0-3]):[0-5][0-9]$"
+                }
+              }
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "unit": {
+          "const": "time_window"
+        },
+        "source_url": {
+          "$ref": "#/$defs/source_url"
+        },
+        "verified": {
+          "$ref": "#/$defs/verified"
+        },
+        "status": {
+          "$ref": "#/$defs/status"
+        }
+      }
+    },
+    "evaluation.profit_target": {
+      "title": "Profit target",
+      "description": "Profit target. The profit needed to pass the evaluation. Unit: usd (US dollars.)",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "value",
+        "unit",
+        "source_url",
+        "verified",
+        "status"
+      ],
+      "properties": {
+        "value": {
+          "type": "number",
+          "minimum": 0
+        },
+        "unit": {
+          "const": "usd"
+        },
+        "source_url": {
+          "$ref": "#/$defs/source_url"
+        },
+        "verified": {
+          "$ref": "#/$defs/verified"
+        },
+        "status": {
+          "$ref": "#/$defs/status"
+        }
+      }
+    },
+    "evaluation.max_drawdown": {
+      "title": "Maximum drawdown",
+      "description": "Maximum drawdown. The drawdown: the floor sits this far below the balance it follows (see drawdown_type), and reaching it fails the evaluation. Unit: usd (US dollars.)",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "value",
+        "unit",
+        "source_url",
+        "verified",
+        "status"
+      ],
+      "properties": {
+        "value": {
+          "type": "number",
+          "minimum": 0
+        },
+        "unit": {
+          "const": "usd"
+        },
+        "source_url": {
+          "$ref": "#/$defs/source_url"
+        },
+        "verified": {
+          "$ref": "#/$defs/verified"
+        },
+        "status": {
+          "$ref": "#/$defs/status"
+        }
+      }
+    },
+    "evaluation.drawdown_type": {
+      "title": "Drawdown type",
+      "description": "Drawdown type. How the drawdown floor follows the balance: end_of_day trails the highest end-of-day balance; intraday trails the highest balance reached at any moment, open profit included; static never moves. Unit: choice (One of the listed values.)",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "value",
+        "unit",
+        "source_url",
+        "verified",
+        "status"
+      ],
+      "properties": {
+        "value": {
+          "type": "string",
+          "enum": [
+            "end_of_day",
+            "intraday",
+            "static"
+          ]
+        },
+        "unit": {
+          "const": "choice"
+        },
+        "source_url": {
+          "$ref": "#/$defs/source_url"
+        },
+        "verified": {
+          "$ref": "#/$defs/verified"
+        },
+        "status": {
+          "$ref": "#/$defs/status"
+        }
+      }
+    },
+    "evaluation.drawdown_stops_at": {
+      "title": "Trailing drawdown stops at",
+      "description": "Trailing drawdown stops at. Where a trailing floor stops rising: at the starting balance, at the balance of the profit target, or never. Unit: choice (One of the listed values.)",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "value",
+        "unit",
+        "source_url",
+        "verified",
+        "status"
+      ],
+      "properties": {
+        "value": {
+          "type": "string",
+          "enum": [
+            "starting_balance",
+            "profit_target",
+            "never"
+          ]
+        },
+        "unit": {
+          "const": "choice"
+        },
+        "source_url": {
+          "$ref": "#/$defs/source_url"
+        },
+        "verified": {
+          "$ref": "#/$defs/verified"
+        },
+        "status": {
+          "$ref": "#/$defs/status"
+        }
+      }
+    },
+    "evaluation.daily_loss_limit": {
+      "title": "Daily loss limit",
+      "description": "Daily loss limit. The most the account may lose in one trading day; null when the plan has none. Unit: usd (US dollars.)",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "value",
+        "unit",
+        "source_url",
+        "verified",
+        "status"
+      ],
+      "properties": {
+        "value": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "unit": {
+          "const": "usd"
+        },
+        "source_url": {
+          "$ref": "#/$defs/source_url"
+        },
+        "verified": {
+          "$ref": "#/$defs/verified"
+        },
+        "status": {
+          "$ref": "#/$defs/status"
+        }
+      }
+    },
+    "evaluation.consistency_max_day_pct": {
+      "title": "Consistency",
+      "description": "Consistency. The largest share of the total profit one trading day may contribute when the evaluation passes; null when the plan has no consistency rule. Unit: percent (A percentage: 50 means 50%.)",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "value",
+        "unit",
+        "source_url",
+        "verified",
+        "status"
+      ],
+      "properties": {
+        "value": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "unit": {
+          "const": "percent"
+        },
+        "source_url": {
+          "$ref": "#/$defs/source_url"
+        },
+        "verified": {
+          "$ref": "#/$defs/verified"
+        },
+        "status": {
+          "$ref": "#/$defs/status"
+        }
+      }
+    },
+    "evaluation.min_trading_days": {
+      "title": "Minimum trading days",
+      "description": "Minimum trading days. Trading days needed before the evaluation can pass; null when there is no minimum. Unit: trading_days (Trading days (a day the account traded, on the firm's trading-day clock).)",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "value",
+        "unit",
+        "source_url",
+        "verified",
+        "status"
+      ],
+      "properties": {
+        "value": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "unit": {
+          "const": "trading_days"
+        },
+        "source_url": {
+          "$ref": "#/$defs/source_url"
+        },
+        "verified": {
+          "$ref": "#/$defs/verified"
+        },
+        "status": {
+          "$ref": "#/$defs/status"
+        }
+      }
+    },
+    "evaluation.time_limit_days": {
+      "title": "Time limit",
+      "description": "Time limit. Calendar days the evaluation may run before it expires; null when it has no time limit. Unit: calendar_days (Calendar days.)",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "value",
+        "unit",
+        "source_url",
+        "verified",
+        "status"
+      ],
+      "properties": {
+        "value": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "unit": {
+          "const": "calendar_days"
+        },
+        "source_url": {
+          "$ref": "#/$defs/source_url"
+        },
+        "verified": {
+          "$ref": "#/$defs/verified"
+        },
+        "status": {
+          "$ref": "#/$defs/status"
+        }
+      }
+    },
+    "evaluation.max_contracts": {
+      "title": "Maximum contracts",
+      "description": "Maximum contracts. The most contracts that may be open at once; null when contract_growth sets the limit instead. Unit: contracts (E-mini contracts; one E-mini equals 10 micro contracts.)",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "value",
+        "unit",
+        "source_url",
+        "verified",
+        "status"
+      ],
+      "properties": {
+        "value": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "unit": {
+          "const": "contracts"
+        },
+        "source_url": {
+          "$ref": "#/$defs/source_url"
+        },
+        "verified": {
+          "$ref": "#/$defs/verified"
+        },
+        "status": {
+          "$ref": "#/$defs/status"
+        }
+      }
+    },
+    "evaluation.contract_growth": {
+      "title": "Contract limit growth",
+      "description": "Contract limit growth. A contract limit that grows with profit: start contracts, plus one for every add_one_per_usd of profit at the start of the day; null when the limit is fixed. Unit: contract_growth (An object { start (E-minis), add_one_per_usd (US dollars of profit per extra contract) }.)",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "value",
+        "unit",
+        "source_url",
+        "verified",
+        "status"
+      ],
+      "properties": {
+        "value": {
+          "anyOf": [
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "start",
+                "add_one_per_usd"
+              ],
+              "properties": {
+                "start": {
+                  "type": "integer",
+                  "minimum": 1
+                },
+                "add_one_per_usd": {
+                  "type": "number",
+                  "minimum": 0
+                }
+              }
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "unit": {
+          "const": "contract_growth"
+        },
+        "source_url": {
+          "$ref": "#/$defs/source_url"
+        },
+        "verified": {
+          "$ref": "#/$defs/verified"
+        },
+        "status": {
+          "$ref": "#/$defs/status"
+        }
+      }
+    },
+    "funded.starting_balance": {
+      "title": "Funded starting balance",
+      "description": "Funded starting balance. The balance the funded account starts at. 0 means the account counts profit from zero, with its drawdown floor below zero. Unit: usd (US dollars.)",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "value",
+        "unit",
+        "source_url",
+        "verified",
+        "status"
+      ],
+      "properties": {
+        "value": {
+          "type": "number",
+          "minimum": 0
+        },
+        "unit": {
+          "const": "usd"
+        },
+        "source_url": {
+          "$ref": "#/$defs/source_url"
+        },
+        "verified": {
+          "$ref": "#/$defs/verified"
+        },
+        "status": {
+          "$ref": "#/$defs/status"
+        }
+      }
+    },
+    "funded.max_drawdown": {
+      "title": "Maximum drawdown",
+      "description": "Maximum drawdown. The drawdown: the floor sits this far below the balance it follows (see drawdown_type), and reaching it closes the funded account. Unit: usd (US dollars.)",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "value",
+        "unit",
+        "source_url",
+        "verified",
+        "status"
+      ],
+      "properties": {
+        "value": {
+          "type": "number",
+          "minimum": 0
+        },
+        "unit": {
+          "const": "usd"
+        },
+        "source_url": {
+          "$ref": "#/$defs/source_url"
+        },
+        "verified": {
+          "$ref": "#/$defs/verified"
+        },
+        "status": {
+          "$ref": "#/$defs/status"
+        }
+      }
+    },
+    "funded.drawdown_type": {
+      "title": "Drawdown type",
+      "description": "Drawdown type. How the drawdown floor follows the balance: end_of_day trails the highest end-of-day balance; intraday trails the highest balance reached at any moment, open profit included; static never moves. Unit: choice (One of the listed values.)",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "value",
+        "unit",
+        "source_url",
+        "verified",
+        "status"
+      ],
+      "properties": {
+        "value": {
+          "type": "string",
+          "enum": [
+            "end_of_day",
+            "intraday",
+            "static"
+          ]
+        },
+        "unit": {
+          "const": "choice"
+        },
+        "source_url": {
+          "$ref": "#/$defs/source_url"
+        },
+        "verified": {
+          "$ref": "#/$defs/verified"
+        },
+        "status": {
+          "$ref": "#/$defs/status"
+        }
+      }
+    },
+    "funded.drawdown_stops_above_start": {
+      "title": "Trailing drawdown stops at",
+      "description": "Trailing drawdown stops at. A trailing floor stops rising once it reaches the funded starting balance plus this amount; 0 means it stops at the funded starting balance. Unit: usd (US dollars.)",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "value",
+        "unit",
+        "source_url",
+        "verified",
+        "status"
+      ],
+      "properties": {
+        "value": {
+          "type": "number",
+          "minimum": 0
+        },
+        "unit": {
+          "const": "usd"
+        },
+        "source_url": {
+          "$ref": "#/$defs/source_url"
+        },
+        "verified": {
+          "$ref": "#/$defs/verified"
+        },
+        "status": {
+          "$ref": "#/$defs/status"
+        }
+      }
+    },
+    "funded.drawdown_after_payout": {
+      "title": "Drawdown after a payout",
+      "description": "Drawdown after a payout. After the first payout, or after every payout, the floor moves to the funded starting balance plus floor_above_start; null when payouts do not move the floor. Unit: payout_lock (An object { after (first_payout or every_payout), floor_above_start (US dollars) }.)",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "value",
+        "unit",
+        "source_url",
+        "verified",
+        "status"
+      ],
+      "properties": {
+        "value": {
+          "anyOf": [
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "after",
+                "floor_above_start"
+              ],
+              "properties": {
+                "after": {
+                  "type": "string",
+                  "enum": [
+                    "first_payout",
+                    "every_payout"
+                  ]
+                },
+                "floor_above_start": {
+                  "type": "number",
+                  "minimum": 0
+                }
+              }
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "unit": {
+          "const": "payout_lock"
+        },
+        "source_url": {
+          "$ref": "#/$defs/source_url"
+        },
+        "verified": {
+          "$ref": "#/$defs/verified"
+        },
+        "status": {
+          "$ref": "#/$defs/status"
+        }
+      }
+    },
+    "funded.daily_loss_limit": {
+      "title": "Daily loss limit",
+      "description": "Daily loss limit. The most the account may lose in one trading day; null when the plan has none. Unit: usd (US dollars.)",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "value",
+        "unit",
+        "source_url",
+        "verified",
+        "status"
+      ],
+      "properties": {
+        "value": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "unit": {
+          "const": "usd"
+        },
+        "source_url": {
+          "$ref": "#/$defs/source_url"
+        },
+        "verified": {
+          "$ref": "#/$defs/verified"
+        },
+        "status": {
+          "$ref": "#/$defs/status"
+        }
+      }
+    },
+    "funded.max_contracts": {
+      "title": "Maximum contracts",
+      "description": "Maximum contracts. The most contracts that may be open at once; null when contract_scaling or contract_growth sets the limit instead. Unit: contracts (E-mini contracts; one E-mini equals 10 micro contracts.)",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "value",
+        "unit",
+        "source_url",
+        "verified",
+        "status"
+      ],
+      "properties": {
+        "value": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "unit": {
+          "const": "contracts"
+        },
+        "source_url": {
+          "$ref": "#/$defs/source_url"
+        },
+        "verified": {
+          "$ref": "#/$defs/verified"
+        },
+        "status": {
+          "$ref": "#/$defs/status"
+        }
+      }
+    },
+    "funded.contract_scaling": {
+      "title": "Contract scaling",
+      "description": "Contract scaling. The contract limit by profit above the funded starting balance, read at the start of each day: each step applies once that profit reaches its profit_above; null when there is no scaling plan. Unit: contract_scaling (A list of steps, each { profit_above (US dollars), max_contracts (E-minis) }.)",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "value",
+        "unit",
+        "source_url",
+        "verified",
+        "status"
+      ],
+      "properties": {
+        "value": {
+          "anyOf": [
+            {
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "profit_above",
+                  "max_contracts"
+                ],
+                "properties": {
+                  "profit_above": {
+                    "type": "number",
+                    "minimum": 0
+                  },
+                  "max_contracts": {
+                    "type": "integer",
+                    "minimum": 1
+                  }
+                }
+              }
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "unit": {
+          "const": "contract_scaling"
+        },
+        "source_url": {
+          "$ref": "#/$defs/source_url"
+        },
+        "verified": {
+          "$ref": "#/$defs/verified"
+        },
+        "status": {
+          "$ref": "#/$defs/status"
+        }
+      }
+    },
+    "funded.contract_growth": {
+      "title": "Contract limit growth",
+      "description": "Contract limit growth. A contract limit that grows with profit: start contracts, plus one for every add_one_per_usd of profit at the start of the day; null when the limit is fixed. Unit: contract_growth (An object { start (E-minis), add_one_per_usd (US dollars of profit per extra contract) }.)",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "value",
+        "unit",
+        "source_url",
+        "verified",
+        "status"
+      ],
+      "properties": {
+        "value": {
+          "anyOf": [
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "start",
+                "add_one_per_usd"
+              ],
+              "properties": {
+                "start": {
+                  "type": "integer",
+                  "minimum": 1
+                },
+                "add_one_per_usd": {
+                  "type": "number",
+                  "minimum": 0
+                }
+              }
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "unit": {
+          "const": "contract_growth"
+        },
+        "source_url": {
+          "$ref": "#/$defs/source_url"
+        },
+        "verified": {
+          "$ref": "#/$defs/verified"
+        },
+        "status": {
+          "$ref": "#/$defs/status"
+        }
+      }
+    },
+    "funded.reduced_size_until_buffer": {
+      "title": "Reduced size until the buffer",
+      "description": "Reduced size until the buffer. Until the balance first reaches the funded starting balance plus until_profit_above, only this fraction of max_contracts may be open (rounded down, at least one); null when the full limit applies from the start. Unit: reduced_size (An object { fraction (of max_contracts), until_profit_above (US dollars) }.)",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "value",
+        "unit",
+        "source_url",
+        "verified",
+        "status"
+      ],
+      "properties": {
+        "value": {
+          "anyOf": [
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "fraction",
+                "until_profit_above"
+              ],
+              "properties": {
+                "fraction": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 1
+                },
+                "until_profit_above": {
+                  "type": "number",
+                  "minimum": 0
+                }
+              }
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "unit": {
+          "const": "reduced_size"
+        },
+        "source_url": {
+          "$ref": "#/$defs/source_url"
+        },
+        "verified": {
+          "$ref": "#/$defs/verified"
+        },
+        "status": {
+          "$ref": "#/$defs/status"
+        }
+      }
+    },
+    "payouts.min_trading_days": {
+      "title": "Trading days between payouts",
+      "description": "Trading days between payouts. Trading days needed since the last payout (since funding, for the first) before a payout can be requested; null when there is no minimum. Unit: trading_days (Trading days (a day the account traded, on the firm's trading-day clock).) A rule that can change with the payout number is one value when it is the same for every payout, or a list: the first entry applies to the first payout, the second to the second, and the last entry to every later payout.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "value",
+        "unit",
+        "source_url",
+        "verified",
+        "status"
+      ],
+      "properties": {
+        "value": {
+          "anyOf": [
+            {
+              "type": [
+                "integer",
+                "null"
+              ],
+              "minimum": 0
+            },
+            {
+              "type": "array",
+              "minItems": 2,
+              "items": {
+                "type": [
+                  "integer",
+                  "null"
+                ],
+                "minimum": 0
+              }
+            }
+          ]
+        },
+        "unit": {
+          "const": "trading_days"
+        },
+        "source_url": {
+          "$ref": "#/$defs/source_url"
+        },
+        "verified": {
+          "$ref": "#/$defs/verified"
+        },
+        "status": {
+          "$ref": "#/$defs/status"
+        }
+      }
+    },
+    "payouts.min_calendar_days_between": {
+      "title": "Calendar days between payouts",
+      "description": "Calendar days between payouts. Calendar days needed since the last payout (since funding, for the first) before a payout can be requested; null when there is no such rule. Unit: calendar_days (Calendar days.)",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "value",
+        "unit",
+        "source_url",
+        "verified",
+        "status"
+      ],
+      "properties": {
+        "value": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "unit": {
+          "const": "calendar_days"
+        },
+        "source_url": {
+          "$ref": "#/$defs/source_url"
+        },
+        "verified": {
+          "$ref": "#/$defs/verified"
+        },
+        "status": {
+          "$ref": "#/$defs/status"
+        }
+      }
+    },
+    "payouts.min_winning_days": {
+      "title": "Winning days",
+      "description": "Winning days. Winning days needed since the last payout before a payout can be requested; null when not required. Unit: trading_days (Trading days (a day the account traded, on the firm's trading-day clock).) A rule that can change with the payout number is one value when it is the same for every payout, or a list: the first entry applies to the first payout, the second to the second, and the last entry to every later payout.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "value",
+        "unit",
+        "source_url",
+        "verified",
+        "status"
+      ],
+      "properties": {
+        "value": {
+          "anyOf": [
+            {
+              "type": [
+                "integer",
+                "null"
+              ],
+              "minimum": 0
+            },
+            {
+              "type": "array",
+              "minItems": 2,
+              "items": {
+                "type": [
+                  "integer",
+                  "null"
+                ],
+                "minimum": 0
+              }
+            }
+          ]
+        },
+        "unit": {
+          "const": "trading_days"
+        },
+        "source_url": {
+          "$ref": "#/$defs/source_url"
+        },
+        "verified": {
+          "$ref": "#/$defs/verified"
+        },
+        "status": {
+          "$ref": "#/$defs/status"
+        }
+      }
+    },
+    "payouts.winning_day_min_profit": {
+      "title": "A winning day makes at least",
+      "description": "A winning day makes at least. The profit a trading day must make to count as a winning day; null when winning days are not required. Unit: usd (US dollars.) A rule that can change with the payout number is one value when it is the same for every payout, or a list: the first entry applies to the first payout, the second to the second, and the last entry to every later payout.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "value",
+        "unit",
+        "source_url",
+        "verified",
+        "status"
+      ],
+      "properties": {
+        "value": {
+          "anyOf": [
+            {
+              "type": [
+                "number",
+                "null"
+              ],
+              "minimum": 0
+            },
+            {
+              "type": "array",
+              "minItems": 2,
+              "items": {
+                "type": [
+                  "number",
+                  "null"
+                ],
+                "minimum": 0
+              }
+            }
+          ]
+        },
+        "unit": {
+          "const": "usd"
+        },
+        "source_url": {
+          "$ref": "#/$defs/source_url"
+        },
+        "verified": {
+          "$ref": "#/$defs/verified"
+        },
+        "status": {
+          "$ref": "#/$defs/status"
+        }
+      }
+    },
+    "payouts.consistency_max_day_pct": {
+      "title": "Payout consistency",
+      "description": "Payout consistency. The largest share of the counted profit (see profit_basis) one trading day since the last payout may contribute before a payout is allowed; null when there is no such rule. Unit: percent (A percentage: 50 means 50%.) A rule that can change with the payout number is one value when it is the same for every payout, or a list: the first entry applies to the first payout, the second to the second, and the last entry to every later payout.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "value",
+        "unit",
+        "source_url",
+        "verified",
+        "status"
+      ],
+      "properties": {
+        "value": {
+          "anyOf": [
+            {
+              "type": [
+                "number",
+                "null"
+              ],
+              "minimum": 0
+            },
+            {
+              "type": "array",
+              "minItems": 2,
+              "items": {
+                "type": [
+                  "number",
+                  "null"
+                ],
+                "minimum": 0
+              }
+            }
+          ]
+        },
+        "unit": {
+          "const": "percent"
+        },
+        "source_url": {
+          "$ref": "#/$defs/source_url"
+        },
+        "verified": {
+          "$ref": "#/$defs/verified"
+        },
+        "status": {
+          "$ref": "#/$defs/status"
+        }
+      }
+    },
+    "payouts.profit_basis": {
+      "title": "Profit counted from",
+      "description": "Profit counted from. Where the profit counted toward a payout is measured from: the last payout (since_last_payout) or the start of the funded account (since_funded). Unit: choice (One of the listed values.) A rule that can change with the payout number is one value when it is the same for every payout, or a list: the first entry applies to the first payout, the second to the second, and the last entry to every later payout.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "value",
+        "unit",
+        "source_url",
+        "verified",
+        "status"
+      ],
+      "properties": {
+        "value": {
+          "anyOf": [
+            {
+              "type": "string",
+              "enum": [
+                "since_last_payout",
+                "since_funded"
+              ]
+            },
+            {
+              "type": "array",
+              "minItems": 2,
+              "items": {
+                "type": "string",
+                "enum": [
+                  "since_last_payout",
+                  "since_funded"
+                ]
+              }
+            }
+          ]
+        },
+        "unit": {
+          "const": "choice"
+        },
+        "source_url": {
+          "$ref": "#/$defs/source_url"
+        },
+        "verified": {
+          "$ref": "#/$defs/verified"
+        },
+        "status": {
+          "$ref": "#/$defs/status"
+        }
+      }
+    },
+    "payouts.min_profit": {
+      "title": "Profit before a payout",
+      "description": "Profit before a payout. The profit, counted from profit_basis, needed before a payout can be requested; null when there is no minimum. Unit: usd (US dollars.) A rule that can change with the payout number is one value when it is the same for every payout, or a list: the first entry applies to the first payout, the second to the second, and the last entry to every later payout.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "value",
+        "unit",
+        "source_url",
+        "verified",
+        "status"
+      ],
+      "properties": {
+        "value": {
+          "anyOf": [
+            {
+              "type": [
+                "number",
+                "null"
+              ],
+              "minimum": 0
+            },
+            {
+              "type": "array",
+              "minItems": 2,
+              "items": {
+                "type": [
+                  "number",
+                  "null"
+                ],
+                "minimum": 0
+              }
+            }
+          ]
+        },
+        "unit": {
+          "const": "usd"
+        },
+        "source_url": {
+          "$ref": "#/$defs/source_url"
+        },
+        "verified": {
+          "$ref": "#/$defs/verified"
+        },
+        "status": {
+          "$ref": "#/$defs/status"
+        }
+      }
+    },
+    "payouts.buffer": {
+      "title": "Buffer kept in the account",
+      "description": "Buffer kept in the account. Profit above the funded starting balance that must stay in the account; a payout comes only from profit above it. 0 means no buffer. Unit: usd (US dollars.) A rule that can change with the payout number is one value when it is the same for every payout, or a list: the first entry applies to the first payout, the second to the second, and the last entry to every later payout.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "value",
+        "unit",
+        "source_url",
+        "verified",
+        "status"
+      ],
+      "properties": {
+        "value": {
+          "anyOf": [
+            {
+              "type": "number",
+              "minimum": 0
+            },
+            {
+              "type": "array",
+              "minItems": 2,
+              "items": {
+                "type": "number",
+                "minimum": 0
+              }
+            }
+          ]
+        },
+        "unit": {
+          "const": "usd"
+        },
+        "source_url": {
+          "$ref": "#/$defs/source_url"
+        },
+        "verified": {
+          "$ref": "#/$defs/verified"
+        },
+        "status": {
+          "$ref": "#/$defs/status"
+        }
+      }
+    },
+    "payouts.max_payout": {
+      "title": "Largest payout",
+      "description": "Largest payout. The largest single payout; null when there is no fixed cap. Unit: usd (US dollars.) A rule that can change with the payout number is one value when it is the same for every payout, or a list: the first entry applies to the first payout, the second to the second, and the last entry to every later payout.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "value",
+        "unit",
+        "source_url",
+        "verified",
+        "status"
+      ],
+      "properties": {
+        "value": {
+          "anyOf": [
+            {
+              "type": [
+                "number",
+                "null"
+              ],
+              "minimum": 0
+            },
+            {
+              "type": "array",
+              "minItems": 2,
+              "items": {
+                "type": [
+                  "number",
+                  "null"
+                ],
+                "minimum": 0
+              }
+            }
+          ]
+        },
+        "unit": {
+          "const": "usd"
+        },
+        "source_url": {
+          "$ref": "#/$defs/source_url"
+        },
+        "verified": {
+          "$ref": "#/$defs/verified"
+        },
+        "status": {
+          "$ref": "#/$defs/status"
+        }
+      }
+    },
+    "payouts.max_payout_pct_of_profit": {
+      "title": "Payout share of profit",
+      "description": "Payout share of profit. A payout may take at most this share of the profit above the buffer; null when the whole profit above the buffer may be paid out. Unit: percent (A percentage: 50 means 50%.) A rule that can change with the payout number is one value when it is the same for every payout, or a list: the first entry applies to the first payout, the second to the second, and the last entry to every later payout.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "value",
+        "unit",
+        "source_url",
+        "verified",
+        "status"
+      ],
+      "properties": {
+        "value": {
+          "anyOf": [
+            {
+              "type": [
+                "number",
+                "null"
+              ],
+              "minimum": 0
+            },
+            {
+              "type": "array",
+              "minItems": 2,
+              "items": {
+                "type": [
+                  "number",
+                  "null"
+                ],
+                "minimum": 0
+              }
+            }
+          ]
+        },
+        "unit": {
+          "const": "percent"
+        },
+        "source_url": {
+          "$ref": "#/$defs/source_url"
+        },
+        "verified": {
+          "$ref": "#/$defs/verified"
+        },
+        "status": {
+          "$ref": "#/$defs/status"
+        }
+      }
+    },
+    "payouts.max_payout_pct_of_balance": {
+      "title": "Payout share of the balance",
+      "description": "Payout share of the balance. A payout may be at most this share of the account balance; null when there is no such cap. Unit: percent (A percentage: 50 means 50%.) A rule that can change with the payout number is one value when it is the same for every payout, or a list: the first entry applies to the first payout, the second to the second, and the last entry to every later payout.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "value",
+        "unit",
+        "source_url",
+        "verified",
+        "status"
+      ],
+      "properties": {
+        "value": {
+          "anyOf": [
+            {
+              "type": [
+                "number",
+                "null"
+              ],
+              "minimum": 0
+            },
+            {
+              "type": "array",
+              "minItems": 2,
+              "items": {
+                "type": [
+                  "number",
+                  "null"
+                ],
+                "minimum": 0
+              }
+            }
+          ]
+        },
+        "unit": {
+          "const": "percent"
+        },
+        "source_url": {
+          "$ref": "#/$defs/source_url"
+        },
+        "verified": {
+          "$ref": "#/$defs/verified"
+        },
+        "status": {
+          "$ref": "#/$defs/status"
+        }
+      }
+    },
+    "payouts.max_payout_multiple_of_recent_profit": {
+      "title": "Payout multiple of recent profit",
+      "description": "Payout multiple of recent profit. A payout may be at most this multiple of the profit made since the last payout; null when there is no such cap. Unit: multiple (A multiplier: 2 means twice.) A rule that can change with the payout number is one value when it is the same for every payout, or a list: the first entry applies to the first payout, the second to the second, and the last entry to every later payout.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "value",
+        "unit",
+        "source_url",
+        "verified",
+        "status"
+      ],
+      "properties": {
+        "value": {
+          "anyOf": [
+            {
+              "type": [
+                "number",
+                "null"
+              ],
+              "minimum": 0
+            },
+            {
+              "type": "array",
+              "minItems": 2,
+              "items": {
+                "type": [
+                  "number",
+                  "null"
+                ],
+                "minimum": 0
+              }
+            }
+          ]
+        },
+        "unit": {
+          "const": "multiple"
+        },
+        "source_url": {
+          "$ref": "#/$defs/source_url"
+        },
+        "verified": {
+          "$ref": "#/$defs/verified"
+        },
+        "status": {
+          "$ref": "#/$defs/status"
+        }
+      }
+    },
+    "payouts.profit_split_pct": {
+      "title": "Profit split",
+      "description": "Profit split. The trader's share of each payout. Unit: percent (A percentage: 50 means 50%.) A rule that can change with the payout number is one value when it is the same for every payout, or a list: the first entry applies to the first payout, the second to the second, and the last entry to every later payout.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "value",
+        "unit",
+        "source_url",
+        "verified",
+        "status"
+      ],
+      "properties": {
+        "value": {
+          "anyOf": [
+            {
+              "type": "number",
+              "minimum": 0
+            },
+            {
+              "type": "array",
+              "minItems": 2,
+              "items": {
+                "type": "number",
+                "minimum": 0
+              }
+            }
+          ]
+        },
+        "unit": {
+          "const": "percent"
+        },
+        "source_url": {
+          "$ref": "#/$defs/source_url"
+        },
+        "verified": {
+          "$ref": "#/$defs/verified"
+        },
+        "status": {
+          "$ref": "#/$defs/status"
+        }
+      }
+    },
+    "payouts.lifetime_max_payouts": {
+      "title": "Payouts before the account closes",
+      "description": "Payouts before the account closes. The funded account closes after this many payouts; null when there is no such limit. Unit: count (A count.)",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "value",
+        "unit",
+        "source_url",
+        "verified",
+        "status"
+      ],
+      "properties": {
+        "value": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "unit": {
+          "const": "count"
+        },
+        "source_url": {
+          "$ref": "#/$defs/source_url"
+        },
+        "verified": {
+          "$ref": "#/$defs/verified"
+        },
+        "status": {
+          "$ref": "#/$defs/status"
+        }
+      }
+    },
+    "payouts.lifetime_max_payout_usd": {
+      "title": "Total payouts before the account closes",
+      "description": "Total payouts before the account closes. The funded account closes once its payouts add up to this amount; null when there is no such limit. Unit: usd (US dollars.)",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "value",
+        "unit",
+        "source_url",
+        "verified",
+        "status"
+      ],
+      "properties": {
+        "value": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "unit": {
+          "const": "usd"
+        },
+        "source_url": {
+          "$ref": "#/$defs/source_url"
+        },
+        "verified": {
+          "$ref": "#/$defs/verified"
+        },
+        "status": {
+          "$ref": "#/$defs/status"
+        }
+      }
+    },
+    "prices.evaluation_fee": {
+      "title": "Evaluation fee",
+      "description": "Evaluation fee. The price of the evaluation, or of the account itself on an instant-funding plan. Unit: usd (US dollars.)",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "value",
+        "unit",
+        "source_url",
+        "verified",
+        "status"
+      ],
+      "properties": {
+        "value": {
+          "type": "number",
+          "minimum": 0
+        },
+        "unit": {
+          "const": "usd"
+        },
+        "source_url": {
+          "$ref": "#/$defs/source_url"
+        },
+        "verified": {
+          "$ref": "#/$defs/verified"
+        },
+        "status": {
+          "$ref": "#/$defs/status"
+        }
+      }
+    },
+    "prices.recurring_fee": {
+      "title": "Recurring fee",
+      "description": "Recurring fee. Charged again every recurring_fee_every_days while the evaluation is open; null when the evaluation fee is paid once. Unit: usd (US dollars.)",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "value",
+        "unit",
+        "source_url",
+        "verified",
+        "status"
+      ],
+      "properties": {
+        "value": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "unit": {
+          "const": "usd"
+        },
+        "source_url": {
+          "$ref": "#/$defs/source_url"
+        },
+        "verified": {
+          "$ref": "#/$defs/verified"
+        },
+        "status": {
+          "$ref": "#/$defs/status"
+        }
+      }
+    },
+    "prices.recurring_fee_every_days": {
+      "title": "Recurring fee period",
+      "description": "Recurring fee period. How often the recurring fee is charged; null when there is no recurring fee. Unit: calendar_days (Calendar days.)",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "value",
+        "unit",
+        "source_url",
+        "verified",
+        "status"
+      ],
+      "properties": {
+        "value": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "unit": {
+          "const": "calendar_days"
+        },
+        "source_url": {
+          "$ref": "#/$defs/source_url"
+        },
+        "verified": {
+          "$ref": "#/$defs/verified"
+        },
+        "status": {
+          "$ref": "#/$defs/status"
+        }
+      }
+    },
+    "prices.reset_fee": {
+      "title": "Reset fee",
+      "description": "Reset fee. The price to restart a failed evaluation; null when the plan offers no reset and a new evaluation is bought instead. Unit: usd (US dollars.)",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "value",
+        "unit",
+        "source_url",
+        "verified",
+        "status"
+      ],
+      "properties": {
+        "value": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "unit": {
+          "const": "usd"
+        },
+        "source_url": {
+          "$ref": "#/$defs/source_url"
+        },
+        "verified": {
+          "$ref": "#/$defs/verified"
+        },
+        "status": {
+          "$ref": "#/$defs/status"
+        }
+      }
+    },
+    "prices.activation_fee": {
+      "title": "Activation fee",
+      "description": "Activation fee. Charged once when the account becomes funded; 0 when there is none. Unit: usd (US dollars.)",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "value",
+        "unit",
+        "source_url",
+        "verified",
+        "status"
+      ],
+      "properties": {
+        "value": {
+          "type": "number",
+          "minimum": 0
+        },
+        "unit": {
+          "const": "usd"
+        },
+        "source_url": {
+          "$ref": "#/$defs/source_url"
+        },
+        "verified": {
+          "$ref": "#/$defs/verified"
+        },
+        "status": {
+          "$ref": "#/$defs/status"
+        }
+      }
+    }
+  }
+}
